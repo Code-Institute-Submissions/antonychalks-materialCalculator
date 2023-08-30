@@ -56,11 +56,16 @@ h2 {
 }
 
 #nav li {
-    height: 33%;
+    box-sizing: border-box;
+    height: 75px;
     float: left;
     list-style-type: none;
     width: 25%;
     text-align: center;
+}
+
+#nav h2{
+    padding-top: 25px;
 }
 
 #main-body-container {
