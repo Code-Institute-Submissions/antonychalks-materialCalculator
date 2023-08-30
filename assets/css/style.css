@@ -68,8 +68,26 @@ h2 {
     padding-top: 25px;
 }
 
+/*Main body*/
 #main-body-container {
     background-color: #46AF8D;
     width: 100%;
     height: 600px;
+}
+/*Footer*/
+.footer-item-container{
+    box-sizing: border-box;
+    height: 75px;
+    width: 50%;
+    background-color: #449182;
+    border: #425962 3px solid;
+}
+
+#contact-support{
+    float: left;
+    text-align: center;
+}
+
+#merchants{
+    float: right;
 }
