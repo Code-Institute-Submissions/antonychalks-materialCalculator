@@ -1,0 +1,6 @@
+1)
+Problem: When using the .active class or the hover function, the full box didn't change background color.
+Cause: The h2 element isnt effected by .active or the hover function.
+Solution: I changed the h2 background-color to 'inherit'.
+
+2)

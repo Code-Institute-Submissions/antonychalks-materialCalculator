@@ -8,12 +8,13 @@
 /*Header*/
 #header {
     height: 150px;
-    border: #425962 3px solid;
+    border-right: #425962 3px solid;
 }
 
 h1,
 h2 {
     color: #C7D99D;
+    background-color: inherit;
 }
 
 #header a {
@@ -21,13 +22,18 @@ h2 {
     color: inherit;
 }
 
-#nav ul{
+#nav ul {
     height: 100%;
     box-sizing: border-box;
 }
+
 #nav li:hover,
-.active {
-    border: #425962 3px solid;
+#nav .active {
+    border-left: #425962 5px solid;
+    border-right: #425962 5px solid;
+    border-top: #425962 5px solid;
+    border-bottom: none;
+    background-color: #46AF8D;
 }
 
 #logo {
@@ -52,7 +58,6 @@ h2 {
     clear: both;
     height: 75px;
     width: 100%;
-    border: #425962 3px solid;
 }
 
 #nav li {
@@ -62,9 +67,12 @@ h2 {
     list-style-type: none;
     width: 25%;
     text-align: center;
+    border: #425962 3px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-#nav h2{
+#nav h2 {
     padding-top: 25px;
 }
 
@@ -74,8 +82,9 @@ h2 {
     width: 100%;
     height: 600px;
 }
+
 /*Footer*/
-.footer-item-container{
+.footer-item-container {
     box-sizing: border-box;
     height: 75px;
     width: 50%;
@@ -83,17 +92,17 @@ h2 {
     border: #425962 3px solid;
 }
 
-#contact-support{
+#contact-support {
     float: left;
     text-align: center;
 }
 
-#merchants{
+#merchants {
     float: right;
     text-align: center;
 }
 
-#merchants li{
+#merchants li {
     float: left;
     width: 20%;
     list-style-type: none;
