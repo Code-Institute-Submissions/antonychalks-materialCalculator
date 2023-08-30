@@ -90,4 +90,12 @@ h2 {
 
 #merchants{
     float: right;
+    text-align: center;
+}
+
+#merchants li{
+    float: left;
+    width: 20%;
+    list-style-type: none;
+    padding-top: 8px;
 }
