@@ -1,70 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A useful tool for calculating how much materials you will need for a job." />
-    <meta name="keywords" content="Carpentry, building, builders, materials, calculator" />
+    <meta
+      name="description"
+      content="A useful tool for calculating how much materials you will need for a job."
+    />
+    <meta
+      name="keywords"
+      content="Carpentry, building, builders, materials, calculator"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Materials Calculator</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="header">
-        <h1 id="logo">
-            <a href="index.html">Materials Calculator</a>
-        </h1>
-        <h1 id="list">
-            <a href="#">Materials list</a>
-        </h1>
-        <nav id="nav">
-            <ul>
-                <a href="carpentry.html">
-                    <li class="active">
-                        <h2>Carpentry</h2>
-                    </li>
-                </a>
-                <a href="bricklayers.html">
-                    <li>
-                        <h2>Bricklaying</h2>
-                    </li>
-                </a>
-                <a href="plasterers.html">
-                    <li>
-                        <h2>Plastering</h2>
-                    </li>
-                </a>
-                <a href="decorators.html">
-                    <li>
-                        <h2>Decorating</h2>
-                    </li>
-                </a>
-            </ul>
-        </nav>
+      <h1 id="logo">
+        <a href="index.html">Materials Calculator</a>
+      </h1>
+      <h1 id="list">
+        <a href="#">Materials list</a>
+      </h1>
+      <nav id="nav">
+        <ul>
+          <a href="carpentry.html">
+            <li class="active">
+              <h2>Carpentry</h2>
+            </li>
+          </a>
+          <a href="bricklayers.html">
+            <li>
+              <h2>Bricklaying</h2>
+            </li>
+          </a>
+          <a href="plasterers.html">
+            <li>
+              <h2>Plastering</h2>
+            </li>
+          </a>
+          <a href="decorators.html">
+            <li>
+              <h2>Decorating</h2>
+            </li>
+          </a>
+        </ul>
+      </nav>
     </header>
-    <div id="main-body-container"></div>
+
+    <div id="main-body-container">
+      <div>
+        <form>
+          <fieldset id="stud-wall">
+            <legend><h1>Stud Wall</h1></legend>
+            <table id="stud-wall" role="presentation">
+              <tr>
+                <td>
+                  <label for="SW-Height">Height (mm)</label>
+                </td>
+                <td>
+                  <label for="SW-Width">Width (mm)</label>
+                </td>
+                <td>
+                  <label for="SC">Stud Centres (mm)</label>
+                </td>
+                <td>
+                  <label for="ST">Stud Thickness (mm) </label>
+                </td>
+                <td>
+                  <label for="NR">Rows of Noggins</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    id="SW-Height"
+                    name="SW-Height"
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="SW-Height"
+                    name="SW-Width"
+                    required
+                  />
+                </td>
+                <td>
+                  <input type="number" id="SC" name="SC" required />
+                </td>
+                <td>
+                  <input type="number" id="ST" name="ST" required />
+                </td>
+                <td>
+                  <input type="number" id="NR" name="NR" required />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <fieldset id="floor">
+            <legend>
+              <h1>Floor</h1>
+            </legend>
+            <table id="floor" role="presentation">
+              <tr>
+                <td>
+                  <label for="FlL">Length (mm)</label>
+                </td>
+                <td>
+                  <label for="FlW">Width (mm)</label>
+                </td>
+                <td>
+                  <label for="JC">Joist Centres (mm)</label>
+                </td>
+                <td>
+                  <label for="JT">Joist Thickness (mm) </label>
+                </td>
+                <td>
+                  <label for="BR">Rows of Blocks</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="number" id="FlL" name="FlL" required />
+                </td>
+                <td>
+                  <input type="number" id="FlW" name="FlW" required />
+                </td>
+                <td>
+                  <input type="number" id="JC" name="JC" required />
+                </td>
+                <td>
+                  <input type="number" id="JT" name="JT" required />
+                </td>
+                <td>
+                  <input type="number" id="BR" name="BR" required />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <fieldset id="floor-boards">
+            <legend>
+              <h1>Floor Boards</h1>
+            </legend>
+            <table id="floor-boards" role="presentation">
+              <tr>
+                <td>
+                  <label for="FBL">Length (mm)</label>
+                </td>
+                <td>
+                  <label for="FBW">Width (mm)</label>
+                </td>
+                <td>
+                  <label for="Board-Width">Board Width (mm)</label>
+                </td>
+                <td>
+                  <label for="Board-Depth">Board Depth (mm)</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="number" id="FlL" name="FlL" required />
+                </td>
+                <td>
+                  <input type="number" id="FlW" name="FlW" required />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="Board-Depth"
+                    name="Board-Depth"
+                    required
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="Board-Width"
+                    name="Board-Depth"
+                    required
+                  />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+      </div>
+      <div id="form-img-container">
+        <div>
+          <h2 class="form-img-title">Stud Wall</h2>
+          <h2 class="form-img-title">Floor Joists</h2>
+          <h2 class="form-img-title">Floor Boards</h2>
+        </div>
+        <div>
+          <img class="form-img" height="200px" />
+          <img class="form-img" height="200px" />
+          <img class="form-img" height="200px" />
+        </div>
+      </div>
+    </div>
+
     <footer id="footer">
-        <div class="footer-item-container" id="contact-support">
-            <h2>Contact for Support</h2>
-            <ul>
-                <li>Phone: 01234567890</li>
-                <li>Email: support@materialcalculator.co.uk</li>
-            </ul>
-        </div>
-        <div class="footer-item-container" id="merchants">
-            <h2>Merchant's websites</h2>
-            <ul>
-                <li>Travis Perkins</li>
-                <li>Champions</li>
-                <li>Lawsons</li>
-                <li>Jewsons</li>
-                <li>Brewers</li>
-            </ul>
-        </div>
-
+      <div class="footer-item-container" id="contact-support">
+        <h2>Contact for Support</h2>
+        <ul>
+          <li>Phone: 01234567890</li>
+          <li>Email: support@materialcalculator.co.uk</li>
+        </ul>
+      </div>
+      <div class="footer-item-container" id="merchants">
+        <h2>Merchant's websites</h2>
+        <ul>
+          <li>Travis Perkins</li>
+          <li>Champions</li>
+          <li>Lawsons</li>
+          <li>Jewsons</li>
+          <li>Brewers</li>
+        </ul>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
