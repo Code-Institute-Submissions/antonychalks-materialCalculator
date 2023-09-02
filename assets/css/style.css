@@ -1,8 +1,16 @@
+/* Colors used:
+h1, h2, h3... - #C7D99D
+text - #D5C0A1
+header/footer background - #449182
+main body background - #46AF8D
+border - #425962
+
+*/
 * {
     margin: 0;
     padding: 0;
     border: none;
-    background-color: inherit; /*#46AF8D*/
+    background-color: inherit;
 }
 
 /*Header*/
@@ -11,7 +19,10 @@
     border-right: #425962 3px solid;
 }
 
-#header, #logo, #nav, #list{
+#header,
+#logo,
+#nav,
+#list {
     background-color: #449182;
 }
 
@@ -115,20 +126,48 @@ h2 {
 }
 
 #form-img-container {
-    border: #425962 solid 3px;
+    border-top: #425962 solid 3px;
     background-color: #46AF8D;
     width: 100%;
 }
 
-.form-img-title{
+.form-img-title {
     width: 33%;
     float: left;
     text-align: center;
 }
 
-.form-img{
+.form-img {
     /*box-sizing: border-box;
     width: 33%;
     float: left;
     border: #425962 solid 2px;*/
+}
+
+td {
+    width: 200px;
+    border: #425962 3px solid;
+    border-radius: 20px;
+    margin-left: 30px;
+    text-align: center;
+    background-color: #7CC7A9;
+}
+
+.unstyled {
+    width: 10px;
+    border: unset;
+    border-radius: unset;
+    margin-left: 30px;
+    text-align: center;
+    background-color: unset;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+input,
+label {
+    text-align: center;
+    color: #425962;
 }
