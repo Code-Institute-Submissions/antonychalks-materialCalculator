@@ -26,11 +26,6 @@
                         <h2>Carpentry</h2>
                     </li>
                 </a>
-                <a href="bricklayers.html">
-                    <li>
-                        <h2>Bricklaying</h2>
-                    </li>
-                </a>
                 <a href="plasterers.html">
                     <li>
                         <h2>Plastering</h2>
@@ -44,7 +39,120 @@
             </ul>
         </nav>
     </header>
-    <div id="main-body-container"></div>
+
+
+    <div id="main-body-container">
+        <form>
+            <legend>
+                <h1>Wall</h1>
+            </legend>
+            <table id="paint-wall" role="presentation">
+                <tr>
+                    <td>
+                        <label for="pa-wall-height">Height (mm)</label>
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        <label for="pa-wall-width">Width (mm)</label>
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        <label for="paint-w-color">Paint Color</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="pa-wall-height" name="pa-wall-height" required />
+                    </td>
+                    <td class="unstyled">X</td>
+                    <td>
+                        <input type="number" id="pa-wall-width" name="pa-wall-width" required />
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        <input type="text" id="paint-w-color" name="paint-w-color" required />
+                    </td>
+                </tr>
+                <tr class="result-row">
+                    <td>
+                        <input type="submit" id="submit" value="Calculate" />
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>Paint: <span id="total-plasterboards">0</span>L</td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        Paint Color: <span id="final-paint-w-color">N/A</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form>
+            <legend>
+                <h1>Ceiling</h1>
+            </legend>
+            <table id="paint-wall" role="presentation">
+                <tr>
+                    <td>
+                        <label for="pa-ceiling-length">Length (mm)</label>
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        <label for="pa-ceiling-width">Width (mm)</label>
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        <label for="paint-c-color">Paint Color</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="pa-ceiling-height" name="pa-ceiling-height" required />
+                    </td>
+                    <td class="unstyled">X</td>
+                    <td>
+                        <input type="number" id="pa-ceiling-width" name="pa-ceiling-width" required />
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        <input type="text" id="paint-c-color" name="paint-c-color" required />
+                    </td>
+                </tr>
+                <tr class="result-row">
+                    <td>
+                        <input type="submit" id="submit" value="Calculate" />
+                    </td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>Paint: <span id="total-c-paint">0</span>L</td>
+                    <td class="unstyled">
+                        <!---Intentionally left blank -->
+                    </td>
+                    <td>
+                        Paint Color: <span id="final-paint-c-color">N/A</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
     <footer id="footer">
         <div class="footer-item-container" id="contact-support">
             <h2>Contact for Support</h2>

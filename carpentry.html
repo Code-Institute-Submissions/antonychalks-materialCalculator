@@ -31,11 +31,6 @@
               <h2>Carpentry</h2>
             </li>
           </a>
-          <a href="bricklayers.html">
-            <li>
-              <h2>Bricklaying</h2>
-            </li>
-          </a>
           <a href="plasterers.html">
             <li>
               <h2>Plastering</h2>
@@ -53,163 +48,203 @@
     <div id="main-body-container">
       <div>
         <form>
-          <fieldset id="stud-wall">
-            <legend><h1>Stud Wall</h1></legend>
-            <table id="stud-wall" role="presentation">
-              <tr>
-                <td>
-                  <label for="SW-Height">Height (mm)</label>
-                </td>
-                <td class="unstyled"><!---Intentionally left blank --></td>
-                <td>
-                  <label for="SW-Width">Width (mm)</label>
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <label for="SC">Stud Centres (mm)</label>
-                </td>
-                <td>
-                  <label for="ST">Stud Thickness (mm) </label>
-                </td>
-                <td>
-                  <label for="NR">Rows of Noggins</label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="number" id="SW-Height" name="SW-Height" required/>
-                </td>
-                <td class="unstyled">X</td>
-                <td>
-                  <input type="number" id="SW-Width" name="SW-Width" required/>
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <input type="number" id="SC" name="SC" required />
-                </td>
-                <td>
-                  <input type="number" id="ST" name="ST" required />
-                </td>
-                <td>
-                  <input type="number" id="NR" name="NR" required />
-                </td>
-              </tr>
-            </table>
-          </fieldset>
-          <fieldset id="floor">
-            <legend>
-              <h1>Floor</h1>
-            </legend>
-            <table id="floor" role="presentation">
-              <tr>
-                <td>
-                  <label for="FlL">Length (mm)</label>
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <label for="FlW">Width (mm)</label>
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <label for="JC">Joist Centres (mm)</label>
-                </td>
-                <td>
-                  <label for="JT">Joist Thickness (mm) </label>
-                </td>
-                <td>
-                  <label for="BR">Rows of Blocks</label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="number" id="FlL" name="FlL" required />
-                </td>
-                <td class="unstyled">X</td>
-                <td>
-                  <input type="number" id="FlW" name="FlW" required />
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <input type="number" id="JC" name="JC" required />
-                </td>
-                <td>
-                  <input type="number" id="JT" name="JT" required />
-                </td>
-                <td>
-                  <input type="number" id="BR" name="BR" required />
-                </td>
-              </tr>
-            </table>
-          </fieldset>
-          <fieldset id="floor-boards">
-            <legend>
-              <h1>Floor Boards</h1>
-            </legend>
-            <table id="floor-boards" role="presentation">
-              <tr>
-                <td>
-                  <label for="FBL">Length (mm)</label>
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <label for="FBW">Width (mm)</label>
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <label for="Board-Width">Board Width (mm)</label>
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <label for="Board-Depth">Board Depth (mm)</label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="number" id="FlL" name="FlL" required />
-                </td>
-                <td class="unstyled">X</td>
-                <td>
-                  <input type="number" id="FlW" name="FlW" required />
-                </td>
-                <td class="unstyled">
-                    <!---Intentionally left blank -->
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    id="Board-Depth"
-                    name="Board-Depth"
-                    required
-                  />
-                </td>
-                <td class="unstyled">X</td>
-                <td>
-                  <input
-                    type="number"
-                    id="Board-Width"
-                    name="Board-Depth"
-                    required
-                  />
-                </td>
-              </tr>
-            </table>
-          </fieldset>
+          <legend><h1>Stud Wall</h1></legend>
+          <table id="stud-wall" role="presentation">
+            <tr>
+              <td>
+                <label for="SW-Height">Height (mm)</label>
+              </td>
+              <td class="unstyled"><!---Intentionally left blank --></td>
+              <td>
+                <label for="SW-Width">Width (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="SC">Stud Centres (mm)</label>
+              </td>
+              <td>
+                <label for="ST">Stud Thickness (mm) </label>
+              </td>
+              <td>
+                <label for="NR">Rows of Noggins</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="number" id="SW-Height" name="SW-Height" required />
+              </td>
+              <td class="unstyled">X</td>
+              <td>
+                <input type="number" id="SW-Width" name="SW-Width" required />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <input type="number" id="SC" name="SC" required />
+              </td>
+              <td>
+                <input type="number" id="ST" name="ST" required />
+              </td>
+              <td>
+                <input type="number" id="NR" name="NR" required />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" id="submit" value="Calculate" />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>Metres of Timber: <span id="SW-total-length">0</span></td>
+            </tr>
+          </table>
+        </form>
+        <form>
+          <legend>
+            <h1>Floor</h1>
+          </legend>
+          <table id="floor" role="presentation">
+            <tr>
+              <td>
+                <label for="FlL">Length (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="FlW">Width (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="JC">Joist Centres (mm)</label>
+              </td>
+              <td>
+                <label for="JT">Joist Thickness (mm) </label>
+              </td>
+              <td>
+                <label for="BR">Rows of Blocks</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="number" id="FlL" name="FlL" required />
+              </td>
+              <td class="unstyled">X</td>
+              <td>
+                <input type="number" id="FlW" name="FlW" required />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <input type="number" id="JC" name="JC" required />
+              </td>
+              <td>
+                <input type="number" id="JT" name="JT" required />
+              </td>
+              <td>
+                <input type="number" id="BR" name="BR" required />
+              </td>
+            </tr>
+            <tr class="result-row">
+              <td>
+                <input type="submit" id="submit" value="Calculate" />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>Metres of Timber: <span id="f-total-length">0</span>m</td>
+            </tr>
+          </table>
+        </form>
+        <form>
+          <legend>
+            <h1>Floor Boards</h1>
+          </legend>
+          <table id="floor-boards" role="presentation">
+            <tr>
+              <td>
+                <label for="FBL">Length (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="FBW">Width (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="Board-Length">Board Length (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="Board-Width">Board Width (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="number" id="FlL" name="FlL" required />
+              </td>
+              <td class="unstyled">X</td>
+              <td>
+                <input type="number" id="FlW" name="FlW" required />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <input
+                  type="number"
+                  id="Board-Length"
+                  name="Board-Length"
+                  required
+                />
+              </td>
+              <td class="unstyled">X</td>
+              <td>
+                <input
+                  type="number"
+                  id="Board-Width"
+                  name="Board-Width"
+                  required
+                />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+            </tr>
+            <tr class="result-row">
+              <td>
+                <input type="submit" id="submit" value="Calculate" />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>Number of Boards: <span id="FB-total">0</span></td>
+            </tr>
+          </table>
         </form>
       </div>
       <div id="form-img-container">

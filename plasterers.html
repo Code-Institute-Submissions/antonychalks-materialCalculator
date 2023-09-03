@@ -1,70 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A useful tool for calculating how much materials you will need for a job." />
-    <meta name="keywords" content="Carpentry, building, builders, materials, calculator" />
+    <meta
+      name="description"
+      content="A useful tool for calculating how much materials you will need for a job."
+    />
+    <meta
+      name="keywords"
+      content="Carpentry, building, builders, materials, calculator"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Materials Calculator</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="header">
-        <h1 id="logo">
-            <a href="index.html">Materials Calculator</a>
-        </h1>
-        <h1 id="list">
-            <a href="#">Materials list</a>
-        </h1>
-        <nav id="nav">
-            <ul>
-                <a href="carpentry.html">
-                    <li>
-                        <h2>Carpentry</h2>
-                    </li>
-                </a>
-                <a href="bricklayers.html">
-                    <li>
-                        <h2>Bricklaying</h2>
-                    </li>
-                </a>
-                <a href="plasterers.html">
-                    <li class="active">
-                        <h2>Plastering</h2>
-                    </li>
-                </a>
-                <a href="decorators.html">
-                    <li>
-                        <h2>Decorating</h2>
-                    </li>
-                </a>
-            </ul>
-        </nav>
+      <h1 id="logo">
+        <a href="index.html">Materials Calculator</a>
+      </h1>
+      <h1 id="list">
+        <a href="#">Materials list</a>
+      </h1>
+      <nav id="nav">
+        <ul>
+          <a href="carpentry.html">
+            <li>
+              <h2>Carpentry</h2>
+            </li>
+          </a>
+          <a href="plasterers.html">
+            <li class="active">
+              <h2>Plastering</h2>
+            </li>
+          </a>
+          <a href="decorators.html">
+            <li>
+              <h2>Decorating</h2>
+            </li>
+          </a>
+        </ul>
+      </nav>
     </header>
-    <div id="main-body-container"></div>
+
+    <div id="main-body-container">
+      <div>
+        <form>
+          <legend>
+            <h1>Wall</h1>
+          </legend>
+          <table id="plastered-wall" role="presentation">
+            <tr>
+              <td>
+                <label for="W-Height">Height (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="W-Width">Width (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="b-height">Board Height (mm)</label>
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <label for="b-width">Board Width (mm)</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="number" id="W-Height" name="W-Height" required />
+              </td>
+              <td class="unstyled">X</td>
+              <td>
+                <input type="number" id="W-Width" name="W-Width" required />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                <input type="number" id="b-height" name="b-height" required />
+              </td>
+              <td class="unstyled">X</td>
+              <td>
+                <input type="number" id="b-width" name="b-width" required />
+              </td>
+            </tr>
+            <tr class="result-row">
+              <td>
+                <input type="submit" id="submit" value="Calculate" />
+              </td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>Plasterboards: <span id="total-plasterboards">0</span></td>
+              <td class="unstyled">
+                <!---Intentionally left blank -->
+              </td>
+              <td>
+                Bags of Multi-finish: <span id="total-multi-bags">0</span>
+              </td>
+            </tr>
+          </table>
+        </form>
+
+
+
+        <form>
+            <legend>
+              <h1>Ceiling</h1>
+            </legend>
+            <table id="ceiling" role="presentation">
+              <tr>
+                <td>
+                  <label for="c-length">Length (mm)</label>
+                </td>
+                <td class="unstyled">
+                  <!---Intentionally left blank -->
+                </td>
+                <td>
+                  <label for="c-width">Width (mm)</label>
+                </td>
+                <td class="unstyled">
+                    <!---Intentionally left blank -->
+                </td>
+                <td>
+                    <label for="cb-height">Board Height (mm)</label>
+                </td>
+                <td class="unstyled">
+                    <!---Intentionally left blank -->
+                </td>
+                <td>
+                    <label for="cb-width">Board Width (mm)</label>
+                </td>
+                <td>
+                    <label for="coving">Coving</label>
+                </td>
+
+              </tr>
+            <tr>
+                <td>
+                    <input type="number" id="c-length" name="c-length" required />
+                </td>
+                <td class="unstyled">X</td>
+                <td>
+                    <input type="number" id="c-width" name="c-width" required />
+                </td>
+                <td class="unstyled">
+                    <!---Intentionally left blank -->
+                </td>
+                <td>
+                    <input type="number" id="cb-height" name="cb-height" required />
+                </td>
+                <td class="unstyled">X</td>
+                <td>
+                    <input type="number" id="cb-width" name="cb-width" required />
+                </td>
+                <td>
+                    <input type="checkbox" id="coving" name="coving"/>
+                </td>
+            </tr>
+            <tr class="result-row">
+                <td>
+                    <input type="submit" id="submit" value="Calculate" />
+                </td>
+                <td class="unstyled">
+                    <!---Intentionally left blank -->
+                </td>
+                <td>Plasterboards: <span id="total-plasterboards">0</span></td>
+                <td class="unstyled">
+                    <!---Intentionally left blank -->
+                </td>
+                <td>
+                    Bags of Multi-finish: <span id="total-multi-bags">0</span>
+                </td>
+                <td class="unstyled">
+                    <!---Intentionally left blank -->
+                </td>
+                <td class="unstyled"><!--Remove class with javacript if coving is ticked-->
+                    <span id="coving"></span>
+                </td>
+            </tr>
+            </table>
+          </fieldset>
+        </form>
+      </div>
+      <div id="form-img-container">
+        <div>
+          <h2 class="form-img-title">Stud Wall</h2>
+          <h2 class="form-img-title">Floor Joists</h2>
+          <h2 class="form-img-title">Floor Boards</h2>
+        </div>
+        <div>
+          <img class="form-img" height="200px" />
+          <img class="form-img" height="200px" />
+          <img class="form-img" height="200px" />
+        </div>
+      </div>
+    </div>
+
     <footer id="footer">
-        <div class="footer-item-container" id="contact-support">
-            <h2>Contact for Support</h2>
-            <ul>
-                <li>Phone: 01234567890</li>
-                <li>Email: support@materialcalculator.co.uk</li>
-            </ul>
-        </div>
-        <div class="footer-item-container" id="merchants">
-            <h2>Merchant's websites</h2>
-            <ul>
-                <li>Travis Perkins</li>
-                <li>Champions</li>
-                <li>Lawsons</li>
-                <li>Jewsons</li>
-                <li>Brewers</li>
-            </ul>
-        </div>
-
+      <div class="footer-item-container" id="contact-support">
+        <h2>Contact for Support</h2>
+        <ul>
+          <li>Phone: 01234567890</li>
+          <li>Email: support@materialcalculator.co.uk</li>
+        </ul>
+      </div>
+      <div class="footer-item-container" id="merchants">
+        <h2>Merchant's websites</h2>
+        <ul>
+          <li>Travis Perkins</li>
+          <li>Champions</li>
+          <li>Lawsons</li>
+          <li>Jewsons</li>
+          <li>Brewers</li>
+        </ul>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

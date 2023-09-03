@@ -4,3 +4,6 @@ Cause: The h2 element isnt effected by .active or the hover function.
 Solution: I changed the h2 background-color to 'inherit'.
 
 2)
+Problem: The hidden colums in the table were changing background color when I changed the color of the results-row class
+Cause: I wrote the results-row rule after the unstyled class.
+Solution: Changed the location of the class to be before the unstyled class.
