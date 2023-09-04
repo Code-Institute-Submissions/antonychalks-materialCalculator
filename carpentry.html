@@ -47,19 +47,15 @@
 
     <div id="main-body-container">
       <div>
-        <form>
+        <form id="stud-wall">
           <legend><h1>Stud Wall</h1></legend>
-          <table id="stud-wall" role="presentation">
+          <table role="presentation">
             <tr>
               <td>
                 <label for="SW-Height">Height (mm)</label>
               </td>
-              <td class="unstyled"><!---Intentionally left blank --></td>
               <td>
                 <label for="SW-Width">Width (mm)</label>
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
               </td>
               <td>
                 <label for="SC">Stud Centres (mm)</label>
@@ -70,20 +66,13 @@
               <td>
                 <label for="NR">Rows of Noggins</label>
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
             </tr>
             <tr>
               <td>
                 <input type="number" id="SW-Height" name="SW-Height" required />
               </td>
-              <td class="unstyled">X</td>
               <td>
                 <input type="number" id="SW-Width" name="SW-Width" required />
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
               </td>
               <td>
                 <input type="number" id="SC" name="SC" required />
@@ -94,38 +83,26 @@
               <td>
                 <input type="number" id="NR" name="NR" required />
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
             </tr>
             <tr>
               <td>
                 <input type="submit" id="submit" value="Calculate" />
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
               <td>Metres of Timber: <span id="SW-total-length">0</span></td>
             </tr>
           </table>
         </form>
-        <form>
+        <form id="floor">
           <legend>
             <h1>Floor</h1>
           </legend>
-          <table id="floor" role="presentation">
+          <table role="presentation">
             <tr>
               <td>
                 <label for="FlL">Length (mm)</label>
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
               <td>
                 <label for="FlW">Width (mm)</label>
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
               </td>
               <td>
                 <label for="JC">Joist Centres (mm)</label>
@@ -136,20 +113,13 @@
               <td>
                 <label for="BR">Rows of Blocks</label>
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
             </tr>
             <tr>
               <td>
                 <input type="number" id="FlL" name="FlL" required />
               </td>
-              <td class="unstyled">X</td>
               <td>
                 <input type="number" id="FlW" name="FlW" required />
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
               </td>
               <td>
                 <input type="number" id="JC" name="JC" required />
@@ -165,10 +135,10 @@
               <td>
                 <input type="submit" id="submit" value="Calculate" />
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
               <td>Metres of Timber: <span id="f-total-length">0</span>m</td>
+              <td>
+                <button id="list-addition">Add to list</button>
+              </td>
             </tr>
           </table>
         </form>
@@ -181,38 +151,22 @@
               <td>
                 <label for="FBL">Length (mm)</label>
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
               <td>
                 <label for="FBW">Width (mm)</label>
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
               </td>
               <td>
                 <label for="Board-Length">Board Length (mm)</label>
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
               <td>
                 <label for="Board-Width">Board Width (mm)</label>
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
               </td>
             </tr>
             <tr>
               <td>
-                <input type="number" id="FlL" name="FlL" required />
+                <input type="number" id="FBL" name="FBL" required />
               </td>
-              <td class="unstyled">X</td>
               <td>
-                <input type="number" id="FlW" name="FlW" required />
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
+                <input type="number" id="FBW" name="FBW" required />
               </td>
               <td>
                 <input
@@ -222,7 +176,6 @@
                   required
                 />
               </td>
-              <td class="unstyled">X</td>
               <td>
                 <input
                   type="number"
@@ -231,22 +184,17 @@
                   required
                 />
               </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
-              </td>
             </tr>
             <tr class="result-row">
               <td>
                 <input type="submit" id="submit" value="Calculate" />
-              </td>
-              <td class="unstyled">
-                <!---Intentionally left blank -->
               </td>
               <td>Number of Boards: <span id="FB-total">0</span></td>
             </tr>
           </table>
         </form>
       </div>
+
       <div id="form-img-container">
         <div>
           <h2 class="form-img-title">Stud Wall</h2>
@@ -261,6 +209,7 @@
       </div>
     </div>
 
+    <script src="assets/js/script.js"></script>
     <footer id="footer">
       <div class="footer-item-container" id="contact-support">
         <h2>Contact for Support</h2>

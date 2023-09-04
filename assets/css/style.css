@@ -137,15 +137,13 @@ h2 {
     text-align: center;
 }
 
-.form-img {
-    /*box-sizing: border-box;
-    width: 33%;
-    float: left;
-    border: #425962 solid 2px;*/
+
+table{
+    width: 100%;
 }
 
 td {
-    width: 200px;
+    width: 15%;
     border: #425962 3px solid;
     border-radius: 20px;
     margin-left: 30px;
@@ -153,13 +151,17 @@ td {
     background-color: #7CC7A9;
 }
 
-.result-row td{
-    border: #425962 2px solid;
+input,
+label{
+    box-sizing: border-box;
+    text-align: center;
+    color: #425962;
+    max-width: 80%;
 }
 
 .unstyled {
-    width: 10px;
-    border: unset;
+    width: 5px;
+    border: red solid 3px;
     border-radius: unset;
     margin-left: 30px;
     text-align: center;
@@ -168,10 +170,4 @@ td {
 
 fieldset {
     margin-bottom: 20px;
-}
-
-input,
-label, td {
-    text-align: center;
-    color: #425962;
 }
