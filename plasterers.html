@@ -47,37 +47,37 @@
 
     <div id="main-body-container">
       <div>
-        <form>
+        <form id="plastering-wall">
           <legend>
             <h1>Wall</h1>
           </legend>
-          <table id="plastered-wall" role="presentation">
+          <table role="presentation">
             <tr>
               <td>
-                <label for="W-Height">Height (mm)</label>
+                <label for="PWH">Height (mm)</label>
               </td>
               <td>
-                <label for="W-Width">Width (mm)</label>
+                <label for="PWW">Width (mm)</label>
               </td>
               <td>
-                <label for="b-height">Board Height (mm)</label>
+                <label for="PBL">Board Length (mm)</label>
               </td>
               <td>
-                <label for="b-width">Board Width (mm)</label>
+                <label for="PBW">Board Width (mm)</label>
               </td>
             </tr>
             <tr>
               <td>
-                <input type="number" id="W-Height" name="W-Height" required />
+                <input type="number" id="PWH" name="PWH" required />
               </td>
               <td>
-                <input type="number" id="W-Width" name="W-Width" required />
+                <input type="number" id="PWW" name="PWW" required />
               </td>
               <td>
-                <input type="number" id="b-height" name="b-height" required />
+                <input type="number" id="PBL" name="PBL" required />
               </td>
               <td>
-                <input type="number" id="b-width" name="b-width" required />
+                <input type="number" id="PBW" name="PBW" required />
               </td>
             </tr>
             <tr class="result-row">
@@ -86,13 +86,11 @@
               </td>
               <td>Plasterboards: <span id="total-plasterboards">0</span></td>
               <td>
-                Bags of Multi-finish: <span id="total-multi-bags">0</span>
+                Bags of Multi-finish (25kg): <span id="total-multi-bags">0</span>
               </td>
             </tr>
           </table>
         </form>
-
-
 
         <form>
             <legend>
@@ -164,6 +162,7 @@
       </div>
     </div>
 
+    <script src="assets/js/script.js"></script>
     <footer id="footer">
       <div class="footer-item-container" id="contact-support">
         <h2>Contact for Support</h2>
