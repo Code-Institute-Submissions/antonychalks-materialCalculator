@@ -105,10 +105,10 @@ function wallPlaster(event) {
     let totalBoard = Math.ceil(boardQty);
     let totalMultiFinish = Math.ceil(multiFinishQty);
     //sets the span to correct amount of boards
-    let plasterboardTotal = document.getElementById("total-plasterboards");
+    let plasterboardTotal = document.getElementById("w-total-plasterboards");
     plasterboardTotal.innerHTML = totalBoard;
     //sets the span to correct amount of bags
-    let multiBagTotal = document.getElementById("total-multi-bags");
+    let multiBagTotal = document.getElementById("w-total-multi-bags");
     multiBagTotal.innerHTML = totalMultiFinish;
 }
 let plasteringWallForm = document.getElementById('plastering-wall');
@@ -121,17 +121,16 @@ function ceilingPlaster(event) {
     let boardLength = document.getElementById("CPBL").value;
     let boardWidth = document.getElementById("CPBW").value;
     let coving = document.getElementById("coving");
+    console.log(length, width, boardLength, boardWidth)
 
     //works out the area of the room and board
     let areaOfCeiling = length * width;
     let areaOfBoard = boardLength * boardWidth;
     //works out plasterboard amount
     let boardQty = areaOfCeiling / areaOfBoard;
-
     //works out bags of plaster
     let metreSqAreaOfCeiling = (length / 1000) * (width / 1000);
     let multiFinishQty = metreSqAreaOfCeiling / 10;
-
     //coving if statement
     if (coving.checked == true) {
         let covingBox = document.getElementById("coving-box");
@@ -150,10 +149,10 @@ function ceilingPlaster(event) {
     let totalBoard = Math.ceil(boardQty);
     let totalMultiFinish = Math.ceil(multiFinishQty);
     //sets the span to correct amount of boards
-    let plasterboardTotal = document.getElementById("total-plasterboards");
+    let plasterboardTotal = document.getElementById("c-total-plasterboards");
     plasterboardTotal.innerHTML = totalBoard;
     //sets the span to correct amount of bags
-    let multiBagTotal = document.getElementById("total-multi-bags");
+    let multiBagTotal = document.getElementById("c-total-multi-bags");
     multiBagTotal.innerHTML = totalMultiFinish;
 }
 let plasteringCeilingForm = document.getElementById('plastering-ceiling');
