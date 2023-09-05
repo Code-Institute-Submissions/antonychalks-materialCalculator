@@ -16,7 +16,6 @@ border - #425962
 /*Header*/
 #header {
     height: 150px;
-    border-right: #425962 3px solid;
 }
 
 #header,
@@ -39,7 +38,7 @@ h2 {
 
 #nav ul {
     height: 100%;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 #nav li:hover,
@@ -67,9 +66,9 @@ h2 {
 }
 
 #nav {
+    box-sizing: border-box;
     position: absolute;
     top: 75px;
-    right: 1px;
     clear: both;
     height: 75px;
     width: 100%;
@@ -80,7 +79,7 @@ h2 {
     height: 75px;
     float: left;
     list-style-type: none;
-    width: 33%;
+    width: 33.3333%;
     text-align: center;
     border: #425962 3px solid;
     border-top-left-radius: 5px;
