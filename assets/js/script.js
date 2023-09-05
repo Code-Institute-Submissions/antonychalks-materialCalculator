@@ -121,7 +121,6 @@ function ceilingPlaster(event) {
     let boardLength = document.getElementById("CPBL").value;
     let boardWidth = document.getElementById("CPBW").value;
     let coving = document.getElementById("coving");
-    console.log(length, width, boardLength, boardWidth)
 
     //works out the area of the room and board
     let areaOfCeiling = length * width;
@@ -157,7 +156,58 @@ function ceilingPlaster(event) {
 }
 let plasteringCeilingForm = document.getElementById('plastering-ceiling');
 
+//Decorating
+function paint(event) {
+    event.preventDefault();
+    //Imports the elements from the DOM
+    let length = document.getElementById("PL").value;
+    let width = document.getElementById("PW").value;
+    let paintColor = document.getElementById("PC").value;
 
+    //works out the area of the space that needs painting.
+    let mmArea = length * width;
+    let area = mmArea/1000;
+
+    let mlPaintAmount = area*100;
+    let paintAmount = mlPaintAmount/1000;
+
+    //rounds up as you can only buy whole products.
+    let totalPaint = Math.ceil(paintAmount);
+    //sets the span to correct amount of boards
+    let paintTotal = document.getElementById("total-paint");
+    paintTotal.innerHTML = totalPaint;
+    //sets the span to correct amount of bags
+    let paintColorSpan = document.getElementById("PC-span");
+    paintColorSpan.innerHTML = paintColor;
+}
+let paintForm = document.getElementById('paint');
+
+function wallpaper(event) {
+    event.preventDefault();
+    //Imports the elements from the DOM
+    let length = document.getElementById("WpL").value;
+    let width = document.getElementById("WpW").value;
+
+    //works out the area of the space that needs wallpapering.
+    let mmArea = length * width;
+    let area = mmArea / 1000;
+
+    let mmRollArea = 10000 * 530;
+    let rollArea = mmRollArea/1000;
+
+    //rounds up as you can only buy whole products.
+    let totalRolls = Math.ceil(area/rollArea);
+
+    //Working out how much paste is needed
+    let paste = Math.ceil(totalRolls/3)*2.5;
+    //sets the span to correct amount of boards
+    let wallpaperTotal = document.getElementById("total-wallpaper");
+    wallpaperTotal.innerHTML = totalRolls;
+    //sets the span to correct amount of bags
+    let pasteTotal = document.getElementById("wallpaper-paste");
+    pasteTotal.innerHTML = paste;
+}
+let wallpaperForm = document.getElementById('wallpaper');
 
 if (title === "Carpentry"){
     floorBoardForm.addEventListener('submit', floorBoard);
@@ -166,6 +216,9 @@ if (title === "Carpentry"){
 } else if (title === "Plastering"){
     plasteringWallForm.addEventListener('submit', wallPlaster);
     plasteringCeilingForm.addEventListener('submit', ceilingPlaster);
+} else if (title === "Decorating"){
+    paintForm.addEventListener('submit', paint)
+    wallpaperForm.addEventListener('submit', wallpaper);
 }
 
 
