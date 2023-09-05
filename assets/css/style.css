@@ -161,6 +161,7 @@ label{
 }
 
 .unstyled {
+    border: unset;
     width: 5px;
     border-radius: unset;
     margin-left: 30px;
