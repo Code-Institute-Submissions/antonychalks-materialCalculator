@@ -120,6 +120,7 @@ h2 {
 /*General Form Rules*/
 #main-body-container {
     background-color: #46AF8D;
+    min-height: 800px;
     height: max-content;
     border-left: #425962 solid 5px;
     border-right: #425962 solid 5px;
