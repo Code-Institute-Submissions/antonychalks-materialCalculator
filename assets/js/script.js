@@ -1,3 +1,8 @@
+let title = document.getElementById("title").innerHTML;
+
+function onLoad(){
+    console.log(title);
+}
 //Carpentry
 function studWall(event){
     event.preventDefault();
@@ -28,7 +33,7 @@ function studWall(event){
 
 }
 let studWallForm = document.getElementById('stud-wall');
-studWallForm.addEventListener('submit', studWall);
+
 
 function floor(event) {
     event.preventDefault();
@@ -51,7 +56,7 @@ function floor(event) {
 
 }
 let floorForm = document.getElementById('floor');
-floorForm.addEventListener('submit', floor);
+
 
 /*
 *This function is used for calculating floor boards in a room
@@ -77,7 +82,7 @@ function floorBoard(event) {
 
 }
 let floorBoardForm = document.getElementById('floor-board');
-floorBoardForm.addEventListener('submit', floorBoard);
+
 
 //Plastering
 function wallPlaster(event) {
@@ -107,7 +112,62 @@ function wallPlaster(event) {
     multiBagTotal.innerHTML = totalMultiFinish;
 }
 let plasteringWallForm = document.getElementById('plastering-wall');
-plasteringWallForm.addEventListener('submit', wallPlaster);
+
+function ceilingPlaster(event) {
+    event.preventDefault();
+    //Imports the elements from the DOM
+    let length = document.getElementById("PCL").value;
+    let width = document.getElementById("PCW").value;
+    let boardLength = document.getElementById("CPBL").value;
+    let boardWidth = document.getElementById("CPBW").value;
+    let coving = document.getElementById("coving");
+
+    //works out the area of the room and board
+    let areaOfCeiling = length * width;
+    let areaOfBoard = boardLength * boardWidth;
+    //works out plasterboard amount
+    let boardQty = areaOfCeiling / areaOfBoard;
+
+    //works out bags of plaster
+    let metreSqAreaOfCeiling = (length / 1000) * (width / 1000);
+    let multiFinishQty = metreSqAreaOfCeiling / 10;
+
+    //coving if statement
+    if (coving.checked == true) {
+        let covingBox = document.getElementById("coving-box");
+        let covingSpan = document.getElementById("coving-span");
+        covingBox.removeAttribute("class");
+        let perimeter = ((length * 2) + (width * 2)) / 1000;
+        covingSpan.innerHTML = `Coving: ${perimeter}m`;
+    } else {
+        let covingBox = document.getElementById("coving-box");
+        let covingSpan = document.getElementById("coving-span");
+        covingBox.setAttribute("class", "unstyled");
+        covingSpan.innerHTML = "";
+    }
+
+    //rounds up as you can only buy whole products.
+    let totalBoard = Math.ceil(boardQty);
+    let totalMultiFinish = Math.ceil(multiFinishQty);
+    //sets the span to correct amount of boards
+    let plasterboardTotal = document.getElementById("total-plasterboards");
+    plasterboardTotal.innerHTML = totalBoard;
+    //sets the span to correct amount of bags
+    let multiBagTotal = document.getElementById("total-multi-bags");
+    multiBagTotal.innerHTML = totalMultiFinish;
+}
+let plasteringCeilingForm = document.getElementById('plastering-ceiling');
+
+
+
+if (title === "Carpentry"){
+    floorBoardForm.addEventListener('submit', floorBoard);
+    floorForm.addEventListener('submit', floor);
+    studWallForm.addEventListener('submit', studWall);
+} else if (title === "Plastering"){
+    plasteringWallForm.addEventListener('submit', wallPlaster);
+    plasteringCeilingForm.addEventListener('submit', ceilingPlaster);
+}
 
 
 

@@ -7,3 +7,8 @@ Solution: I changed the h2 background-color to 'inherit'.
 Problem: The hidden colums in the table were changing background color when I changed the color of the results-row class
 Cause: I wrote the results-row rule after the unstyled class.
 Solution: Changed the location of the class to be before the unstyled class.
+
+3)
+Problem: The javascript for the plastering page doesn't do anything.
+Cause: The event listeners for the carpentry functions were not finding the events as they arn't on plastering.html, so none of the code after the first event listener was being loaded.
+Solution: Added an if statement for all the event listeners and set the condition to the inner HTML of the title element.

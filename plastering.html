@@ -13,7 +13,7 @@
       content="Carpentry, building, builders, materials, calculator"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Materials Calculator</title>
+    <title id="title">Plastering</title>
   </head>
 
   <body>
@@ -31,7 +31,7 @@
               <h2>Carpentry</h2>
             </li>
           </a>
-          <a href="plasterers.html">
+          <a href="plastering.html">
             <li class="active">
               <h2>Plastering</h2>
             </li>
@@ -92,23 +92,23 @@
           </table>
         </form>
 
-        <form>
+        <form id="plastering-ceiling">
             <legend>
               <h1>Ceiling</h1>
             </legend>
-            <table id="ceiling" role="presentation">
+            <table role="presentation">
               <tr>
                 <td>
-                  <label for="c-length">Length (mm)</label>
+                  <label for="PCL">Length (mm)</label>
                 </td>
                 <td>
-                  <label for="c-width">Width (mm)</label>
+                  <label for="PCW">Width (mm)</label>
                 </td>
                 <td>
-                    <label for="cb-height">Board Height (mm)</label>
+                    <label for="CPBL">Board Height (mm)</label>
                 </td>
                 <td>
-                    <label for="cb-width">Board Width (mm)</label>
+                    <label for="CPBW">Board Width (mm)</label>
                 </td>
                 <td>
                     <label for="coving">Coving</label>
@@ -117,16 +117,16 @@
               </tr>
             <tr>
                 <td>
-                    <input type="number" id="c-length" name="c-length" required />
+                    <input type="number" id="PCL" name="PCL" required />
                 </td>
                 <td>
-                    <input type="number" id="c-width" name="c-width" required />
+                    <input type="number" id="PCW" name="PCW" required />
                 </td>
                 <td>
-                    <input type="number" id="cb-height" name="cb-height" required />
+                    <input type="number" id="CPBL" name="CBPL" required />
                 </td>
                 <td>
-                    <input type="number" id="cb-width" name="cb-width" required />
+                    <input type="number" id="CPBW" name="CPBW" required />
                 </td>
                 <td>
                     <input type="checkbox" id="coving" name="coving"/>
@@ -140,8 +140,8 @@
                 <td>
                     Bags of Multi-finish: <span id="total-multi-bags">0</span>
                 </td>
-                <td class="unstyled"><!--Remove class with javacript if coving is ticked-->
-                    <span id="coving"></span>
+                <td id="coving-box" class="unstyled"><!--Remove class with javacript if coving is ticked-->
+                    <span id="coving-span"></span>
                 </td>
             </tr>
             </table>
