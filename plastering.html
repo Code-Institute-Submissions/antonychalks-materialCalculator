@@ -50,110 +50,60 @@
         <form id="plastering-wall">
           <legend>
             <h1>Wall</h1>
-          </legend>
-          <table role="presentation">
-            <tr>
-              <td>
+          </legend> 
+            <div class="label-row">
                 <label for="PWH">Height (mm)</label>
-              </td>
-              <td>
                 <label for="PWW">Width (mm)</label>
-              </td>
-              <td>
                 <label for="PBL">Board Length (mm)</label>
-              </td>
-              <td>
                 <label for="PBW">Board Width (mm)</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
+            </div>
+            <div class="input-row">
                 <input type="number" id="PWH" name="PWH" required />
-              </td>
-              <td>
                 <input type="number" id="PWW" name="PWW" required />
-              </td>
-              <td>
                 <input type="number" id="PBL" name="PBL" required />
-              </td>
-              <td>
                 <input type="number" id="PBW" name="PBW" required />
-              </td>
-            </tr>
-            <tr class="result-row">
-              <td>
+            </div>
+            <div class="submit-row">
                 <input type="submit" id="submit" value="Calculate" />
-              </td>
-              <td>Plasterboards: <span id="w-total-plasterboards">0</span></td>
-              <td>
-                Bags of Multi-finish (25kg): <span id="w-total-multi-bags">0</span>
-              </td>
-            </tr>
-          </table>
+              <p>Plasterboards: <span id="w-total-plasterboards">0</span></p>
+            </div>
+            <div>
+              <p style="width:80%; margin-left:10%;">Bags of Multi-finish (25kg): <span id="w-total-multi-bags">0</span></p>
+            </div>
         </form>
 
         <form id="plastering-ceiling">
             <legend>
               <h1>Ceiling</h1>
             </legend>
-            <table role="presentation">
-              <tr>
-                <td>
-                  <label for="PCL">Length (mm)</label>
-                </td>
-                <td>
-                  <label for="PCW">Width (mm)</label>
-                </td>
-                <td>
-                    <label for="CPBL">Board Height (mm)</label>
-                </td>
-                <td>
-                    <label for="CPBW">Board Width (mm)</label>
-                </td>
-                <td>
-                    <label for="coving">Coving</label>
-                </td>
-
-              </tr>
-            <tr>
-                <td>
-                    <input type="number" id="PCL" name="PCL" required />
-                </td>
-                <td>
-                    <input type="number" id="PCW" name="PCW" required />
-                </td>
-                <td>
-                    <input type="number" id="CPBL" name="CBPL" required />
-                </td>
-                <td>
-                    <input type="number" id="CPBW" name="CPBW" required />
-                </td>
-                <td>
-                    <input type="checkbox" id="coving" name="coving"/>
-                </td>
-            </tr>
-            <tr class="result-row">
-                <td>
-                    <input type="submit" id="submit" value="Calculate" />
-                </td>
-                <td>Plasterboards: <span id="c-total-plasterboards">0</span></td>
-                <td>
-                    Bags of Multi-finish: <span id="c-total-multi-bags">0</span>
-                </td>
-                <td id="coving-box" class="unstyled"><!--Remove class with javacript if coving is ticked-->
-                    <span id="coving-span"></span>
-                </td>
-            </tr>
-            </table>
+            <div class="label-row"> 
+                <label for="PCL">Length (mm)</label>
+                <label for="PCW">Width (mm)</label>
+                <label for="CPBL">Board Height (mm)</label>
+                <label for="CPBW">Board Width (mm)</label>
+                <label for="coving">Coving</label>
+            </div>
+            <div class="input-row">
+                <input type="number" id="PCL" name="PCL" required />
+                <input type="number" id="PCW" name="PCW" required />
+                <input type="number" id="CPBL" name="CBPL" required />
+                <input type="number" id="CPBW" name="CPBW" required />
+                <p><input type="checkbox" id="coving" name="coving"/></p>
+            </div>
+            <div class="submit-row">
+                <input type="submit" id="submit" value="Calculate" />
+                <p>Plasterboards: <span id="c-total-plasterboards">0</span></p>
+            </div>
+            <div class="submit-row">
+                <p>Bags of Multi-finish: <span id="c-total-multi-bags">0</span></p>
+                <p id="coving-box" class="unstyled"><!--Remove class with javacript if coving is ticked-->
+                    <span id="coving-span"></span></p>
+            </div>
+            
           </fieldset>
         </form>
       </div>
       <div id="form-img-container">
-        <div>
-          <h2 class="form-img-title">Stud Wall</h2>
-          <h2 class="form-img-title">Floor Joists</h2>
-          <h2 class="form-img-title">Floor Boards</h2>
-        </div>
         <div>
           <img class="form-img" height="200px" />
           <img class="form-img" height="200px" />

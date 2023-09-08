@@ -1,8 +1,9 @@
 let title = document.getElementById("title").innerHTML;
+let listItemName = "";
+let listItem1 = "";
+let listItem2 = "";
+let listItemType = "";
 
-function onLoad(){
-    console.log(title);
-}
 //Carpentry
 function studWall(event){
     event.preventDefault();
@@ -31,6 +32,8 @@ function studWall(event){
     let studWallTimberLength = document.getElementById("SW-total-length");
     studWallTimberLength.innerHTML = total;
 
+    listItem1 = total+"m timber";
+
 }
 let studWallForm = document.getElementById('stud-wall');
 
@@ -54,6 +57,8 @@ function floor(event) {
     let joistTimberLength = document.getElementById("f-total-length");
     joistTimberLength.innerHTML = total;
 
+    listItem1 = total + "m timber";
+    listItemType = "Floor Joists";
 }
 let floorForm = document.getElementById('floor');
 
@@ -208,6 +213,12 @@ function wallpaper(event) {
     pasteTotal.innerHTML = paste;
 }
 let wallpaperForm = document.getElementById('wallpaper');
+
+function addToList(event){
+    let listItemName = prompt("Please enter item name:", "")
+    
+}
+
 
 if (title === "Carpentry"){
     floorBoardForm.addEventListener('submit', floorBoard);

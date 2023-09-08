@@ -12,3 +12,9 @@ Solution: Changed the location of the class to be before the unstyled class.
 Problem: The javascript for the plastering page doesn't do anything.
 Cause: The event listeners for the carpentry functions were not finding the events as they arn't on plastering.html, so none of the code after the first event listener was being loaded.
 Solution: Added an if statement for all the event listeners and set the condition to the inner HTML of the title element.
+
+3)
+Problem: The nav elements had a gap to the right.
+Cause: I set the width of each tab to 33%.
+Solution: Set the width of each tap to 33.3333%.
+

@@ -50,73 +50,48 @@
         <legend>
           <h1>Paint</h1>
         </legend>
-        <table role="presentation">
-          <tr>
-            <td>
-              <label for="PL">Area Length (mm)</label>
-            </td>
-            <td>
-              <label for="PW">Area Width (mm)</label>
-            </td>
-            <td>
-              <label for="PC">Paint Color</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="number" id="PL" name="PL" required />
-            </td>
-            <td>
-              <input type="number" id="PW" name="PW" required />
-            </td>
-            <td>
-              <input type="text" id="PC" name="PC" required />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="submit" id="submit" value="Calculate" />
-            </td>
-            <td>Paint: <span id="total-paint">0</span>L</td>
-            <td>Paint Color: <span id="PC-span">N/A</span></td>
-          </tr>
-        </table>
+        <div class="label-row">
+          <label for="PL">Area Length (mm)</label>
+          <label for="PW">Area Width (mm)</label>
+          <label for="PC">Paint Color</label>
+        </div>
+        <div class="input-row">
+          <input type="number" id="PL" name="PL" required />
+          <input type="number" id="PW" name="PW" required />
+          <input type="text" id="PC" name="PC" required />
+        </div>
+        <div class="submit-row">
+          <input type="submit" id="submit" value="Calculate" />
+          <p>Paint: <span id="total-paint">0</span>L</p>
+        </div>
+        <p style="width: 80%; margin-left: 10%">
+          Paint Color: <span id="PC-span">N/A</span>
+        </p>
       </form>
 
       <form id="wallpaper">
         <legend>
           <h1>Wallpaper</h1>
         </legend>
-        <table role="wallpaper">
-          <tr>
-            <td>
-              <label for="WpL">Length of wall(mm)</label>
-            </td>
-            <td>
-              <label for="WpW">Height of wall (mm)</label>
-            </td>
-            <td>Length Of Roll</td>
-            <td>Width Of Roll</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="number" id="WpL" name="WpL" required />
-            </td>
-            <td>
-              <input type="number" id="WpW" name="WpW" required />
-            </td>
-            <td>10m</td>
-            <td>530mm</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="submit" id="submit" value="Calculate" />
-            </td>
-            <td>Wallpaper rolls: <span id="total-wallpaper">0</span></td>
-
-            <td>Paste: <span id="wallpaper-paste">0</span>KG</td>
-          </tr>
-        </table>
+        <div class="label-row">
+          <label for="WpL">Length of wall(mm)</label>
+          <label for="WpW">Height of wall (mm)</label>
+          <p>Length Of Roll</p>
+          <p>Width Of Roll</p>
+        </div>
+        <div class="input-row">
+          <input type="number" id="WpL" name="WpL" required />
+          <input type="number" id="WpW" name="WpW" required />
+          <p>10m</p>
+          <p>530mm</p>
+        </div>
+        <div class="submit-row">
+          <input type="submit" id="submit" value="Calculate" />
+          <p>Wallpaper rolls: <span id="total-wallpaper">0</span></p>
+        </div>
+        <p style="width: 80%; margin-left: 10%">
+          Paste: <span id="wallpaper-paste">0</span>KG
+        </p>
       </form>
     </div>
     <script src="assets/js/script.js"></script>

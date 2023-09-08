@@ -47,160 +47,82 @@
 
     <div id="main-body-container">
       <div>
-        <form id="stud-wall">
+        <form id="stud-wall" class="row-container">
           <legend><h1>Stud Wall</h1></legend>
-          <table role="presentation">
-            <tr>
-              <td>
-                <label for="SW-Height">Height (mm)</label>
-              </td>
-              <td>
-                <label for="SW-Width">Width (mm)</label>
-              </td>
-              <td>
-                <label for="SC">Stud Centres (mm)</label>
-              </td>
-              <td>
-                <label for="ST">Stud Thickness (mm) </label>
-              </td>
-              <td>
-                <label for="NR">Rows of Noggins</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="number" id="SW-Height" name="SW-Height" required />
-              </td>
-              <td>
-                <input type="number" id="SW-Width" name="SW-Width" required />
-              </td>
-              <td>
-                <input type="number" id="SC" name="SC" required />
-              </td>
-              <td>
-                <input type="number" id="ST" name="ST" required />
-              </td>
-              <td>
-                <input type="number" id="NR" name="NR" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="submit" id="submit" value="Calculate" />
-              </td>
-              <td>Metres of Timber: <span id="SW-total-length">0</span></td>
-            </tr>
-          </table>
+          <div class="label-row">
+            <label for="SW-Height">Height (mm)</label>
+            <label for="SW-Width">Width (mm)</label>
+            <label for="SC">Stud Centres (mm)</label>
+            <label for="ST">Stud Thickness (mm) </label>
+            <label for="NR">Rows of Noggins</label>
+          </div>
+
+          <div class="input-row">
+            <input type="number" id="SW-Height" name="SW-Height" required />
+            <input type="number" id="SW-Width" name="SW-Width" required />
+            <input type="number" id="SC" name="SC" required />
+            <input type="number" id="ST" name="ST" required />
+            <input type="number" id="NR" name="NR" required />
+          </div>
+
+          <div class="submit-row">
+            <input type="submit" id="submit" value="Calculate" />
+            <p>Metres of Timber: <span id="SW-total-length">0</span></p>
+          </div>
         </form>
+
         <form id="floor">
           <legend>
             <h1>Floor</h1>
           </legend>
-          <table role="presentation">
-            <tr>
-              <td>
-                <label for="FlL">Length (mm)</label>
-              </td>
-              <td>
-                <label for="FlW">Width (mm)</label>
-              </td>
-              <td>
-                <label for="JC">Joist Centres (mm)</label>
-              </td>
-              <td>
-                <label for="JT">Joist Thickness (mm) </label>
-              </td>
-              <td>
-                <label for="BR">Rows of Blocks</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="number" id="FlL" name="FlL" required />
-              </td>
-              <td>
-                <input type="number" id="FlW" name="FlW" required />
-              </td>
-              <td>
-                <input type="number" id="JC" name="JC" required />
-              </td>
-              <td>
-                <input type="number" id="JT" name="JT" required />
-              </td>
-              <td>
-                <input type="number" id="BR" name="BR" required />
-              </td>
-            </tr>
-            <tr class="result-row">
-              <td>
-                <input type="submit" id="submit" value="Calculate" />
-              </td>
-              <td>Metres of Timber: <span id="f-total-length">0</span>m</td>
-              <td>
-                <button id="list-addition">Add to list</button>
-              </td>
-            </tr>
-          </table>
+          <div class="label-row">
+            <label for="FlL">Length (mm)</label>
+            <label for="FlW">Width (mm)</label>
+            <label for="JC">Joist Centres (mm)</label>
+            <label for="JT">Joist Thickness (mm) </label>
+            <label for="BR">Rows of Blocks</label>
+          </div>
+
+          <div class="input-row">
+            <input type="number" id="FlL" name="FlL" required />
+            <input type="number" id="FlW" name="FlW" required />
+            <input type="number" id="JC" name="JC" required />
+            <input type="number" id="JT" name="JT" required />
+            <input type="number" id="BR" name="BR" required />
+          </div>
+
+          <div class="submit-row">
+            <input type="submit" id="submit" value="Calculate" />
+            <p>Metres of Timber: <span id="f-total-length">0</span>m</p>
+          </div>
         </form>
+
         <form id="floor-board">
           <legend>
             <h1>Floor Boards</h1>
           </legend>
-          <table role="presentation">
-            <tr>
-              <td>
+          <div class="label-row">
                 <label for="FbL">Length (mm)</label>
-              </td>
-              <td>
                 <label for="FbW">Width (mm)</label>
-              </td>
-              <td>
                 <label for="Board-Length">Board Length (mm)</label>
-              </td>
-              <td>
                 <label for="Board-Width">Board Width (mm)</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
+            </div>
+
+            <div class="input-row">
                 <input type="number" id="FbL" name="FbL" required />
-              </td>
-              <td>
                 <input type="number" id="FbW" name="FbW" required />
-              </td>
-              <td>
-                <input
-                  type="number"
-                  id="Board-Length"
-                  name="Board-Length"
-                  required
-                />
-              </td>
-              <td>
-                <input
-                  type="number"
-                  id="Board-Width"
-                  name="Board-Width"
-                  required
-                />
-              </td>
-            </tr>
-            <tr class="result-row">
-              <td>
+                <input type="number" id="Board-Length" name="Board-Length" required/>
+                <input type="number" id="Board-Width" name="Board-Width" required/>
+            </div>
+
+            <div class="submit-row">
                 <input type="submit" id="submit" value="Calculate" />
-              </td>
-              <td>Number of Boards: <span id="FB-total">0</span></td>
-            </tr>
-          </table>
+              <p>Number of Boards: <span id="FB-total">0</span></p>
+            </div>
         </form>
       </div>
 
       <div id="form-img-container">
-        <div>
-          <h2 class="form-img-title">Stud Wall</h2>
-          <h2 class="form-img-title">Floor Joists</h2>
-          <h2 class="form-img-title">Floor Boards</h2>
-        </div>
         <div>
           <img class="form-img" height="200px" />
           <img class="form-img" height="200px" />
