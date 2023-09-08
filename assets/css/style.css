@@ -172,7 +172,7 @@ p {
     margin-top: 5px;
 }
 
-.submit-row>* {
+.submit-row>*, #submit-row {
     border-radius: 10px;
 }
 
@@ -205,23 +205,29 @@ fieldset {
         border-bottom-right-radius: 0;
 
     }
-
-    .input-row>* {
+        #input-row>*, .input-row>* {
         width: 50%;
+        height: 40px;
         border-top-left-radius: 0;
         border-top-right-radius: 15px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 15px;
     }
 
-    .label-row>*,
-    .input-row>*,
-    .submit-row {
+    #input-row{
+        margin-top: 5px;;
+    }
+
+        
+        #input-row>*,
+        .label-row>*,
+    .input-row>*, #submit-row>* {
         height: 50px;
     }
 
-    .submit-row #submit,
-    .submit-row p {
+    .submit-row #submit, 
+    .submit-row p, #submit-row p
+     {
         width: 40%;
         margin: 5px 4.5%;
     }
@@ -246,5 +252,13 @@ fieldset {
         width: 100%;
         float: unset;
         text-align: center;
+    }
+
+    #plastering-ceiling{
+        padding-bottom:10px;
+    }
+
+    .not-visible-on-mobile{
+        visibility: hidden;
     }
 }
