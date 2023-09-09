@@ -51,53 +51,75 @@
           <legend>
             <h1>Wall</h1>
           </legend> 
+          <div class="container">
             <div class="label-row">
                 <label for="PWH">Height (mm)</label>
                 <label for="PWW">Width (mm)</label>
                 <label for="PBL">Board Length (mm)</label>
                 <label for="PBW">Board Width (mm)</label>
             </div>
-            <div class="input-row">
-                <input type="number" id="PWH" name="PWH" required />
-                <input type="number" id="PWW" name="PWW" required />
-                <input type="number" id="PBL" name="PBL" required />
-                <input type="number" id="PBW" name="PBW" required />
+        </div>
+
+            <div class="container">
+                <div class="input-row">
+                    <input type="number" id="PWH" name="PWH" required />
+                    <input type="number" id="PWW" name="PWW" required />
+                    <input type="number" id="PBL" name="PBL" required />
+                    <input type="number" id="PBW" name="PBW" required />
+                </div>
             </div>
+
             <div class="submit-row">
                 <input type="submit" id="submit" value="Calculate" />
               <p>Plasterboards: <span id="w-total-plasterboards">0</span></p>
             </div>
-            <div>
-              <p style="width:80%; margin-left:10%;">Bags of Multi-finish (25kg): <span id="w-total-multi-bags">0</span></p>
+            <div class="submit-row">
+              <p >Bags of Multi-finish (25kg): <span id="w-total-multi-bags">0</span></p>
+                <p>Square metreage: <br><span id="metre-sq-area-of-wall">0</span><sup>2</sup></p>
             </div>
         </form>
 
         <form id="plastering-ceiling">
+            <div class="plastering-ceiling">
             <legend>
               <h1>Ceiling</h1>
             </legend>
-            <div class="label-row"> 
-                <label for="PCL">Length (mm)</label>
-                <label for="PCW">Width (mm)</label>
-                <label for="CPBL">Board Height (mm)</label>
-                <label for="CPBW">Board Width (mm)</label>
-                <label for="coving">Coving</label>
-            </div>
-            <div class="input-row">
-                <input type="number" id="PCL" name="PCL" required />
-                <input type="number" id="PCW" name="PCW" required />
-                <input type="number" id="CPBL" name="CBPL" required />
-                <input type="number" id="CPBW" name="CPBW" required />
-                <p><input type="checkbox" id="coving" name="coving"/></p>
-            </div>
+                <div class="label-row"> 
+                    <label for="PCL">Length (mm)</label>
+                    <label for="PCW">Width (mm)</label>
+                    <label for="CPBL">Board Length (mm)</label>
+                    <label for="CPBW">Board Width (mm)</label>
+                    <label for="coving">Coving</label>
+                </div>
+
+
+                <div class="input-row">
+                    <input type="number" id="PCL" name="PCL" required />
+                    <input type="number" id="PCW" name="PCW" required />
+                    <input type="number" id="CPBL" name="CBPL" value="2400" required />
+                    <input type="number" id="CPBW" name="CPBW" value="1200" required />
+                </div>
+                <div id="input-row">
+                    <p><input type="checkbox" id="coving" name="coving" /></p>
+                </div>
+
+
+
             <div class="submit-row">
                 <input type="submit" id="submit" value="Calculate" />
                 <p>Plasterboards: <span id="c-total-plasterboards">0</span></p>
             </div>
+            </div>
             <div class="submit-row">
-                <p>Bags of Multi-finish: <span id="c-total-multi-bags">0</span></p>
-                <p id="coving-box" class="unstyled"><!--Remove class with javacript if coving is ticked-->
-                    <span id="coving-span"></span></p>
+                <p>Bags of Multi-finish: <br> <span id="c-total-multi-bags">0</span></p>
+                <p>Square metreage: <br><span id="metre-sq-area-of-wall"></span><sup>2</sup></p>
+            </div>
+            <div class="submit-row">
+                <p>Bags of Multi-finish (25kg): <span id="w-total-multi-bags">0</span></p>
+                <p id="coving-box" class="unstyled">
+                    <!--Remove class with javacript if coving is ticked-->
+                    <span id="coving-span"></span>
+                </p>
             </div>
             
           </fieldset>
@@ -105,9 +127,9 @@
       </div>
       <div id="form-img-container">
         <div>
-          <img class="form-img" height="200px" />
-          <img class="form-img" height="200px" />
-          <img class="form-img" height="200px" />
+          <img class="form-img" src="assets/images/plasterboard.webp" height="200px" />
+          <img class="form-img" src="assets/images/Plasterboard01.jpg" height="200px" class="not-visible-on-mobile"/>
+          <img class="form-img" src="assets/images/plaster01.jpg" height="200px" />
         </div>
       </div>
     </div>
@@ -124,11 +146,11 @@
       <div class="footer-item-container" id="merchants">
         <h2>Merchant's websites</h2>
         <ul>
-          <li>Travis Perkins</li>
-          <li>Champions</li>
-          <li>Lawsons</li>
-          <li>Jewsons</li>
-          <li>Brewers</li>
+            <li><a target=”_blank” href="https://www.travisperkins.co.uk/">Travis Perkins</a></< /li>
+            <li><a target=”_blank” href="https://www.championtimber.com//"></a>Champions</li>
+            <li><a target=”_blank” href="https://www.lawsons.co.uk/"></a>Lawsons</li>
+            <li><a target=”_blank” href="https://www.jewson.co.uk/"></a>Jewsons</li>
+            <li><a target=”_blank” href="https://www.brewers.co.uk/"></a>Brewers</li>
         </ul>
       </div>
     </footer>

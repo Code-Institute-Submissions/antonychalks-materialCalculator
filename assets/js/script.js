@@ -105,7 +105,8 @@ function wallPlaster(event) {
     //works out bags of plaster
     let metreSqAreaOfWall = (height/1000)*(width/1000);
     let multiFinishQty = metreSqAreaOfWall/10;
-
+    let = metreSqAreaOfWallSpan = document.getElementById("metre-sq-area-of-wall")
+    metreSqAreaOfWallSpan.innerHTML = metreSqAreaOfWall;
     //rounds up as you can only buy whole products.
     let totalBoard = Math.ceil(boardQty);
     let totalMultiFinish = Math.ceil(multiFinishQty);
@@ -135,6 +136,8 @@ function ceilingPlaster(event) {
     //works out bags of plaster
     let metreSqAreaOfCeiling = (length / 1000) * (width / 1000);
     let multiFinishQty = metreSqAreaOfCeiling / 10;
+    
+
     //coving if statement
     if (coving.checked == true) {
         let covingBox = document.getElementById("coving-box");
@@ -158,6 +161,9 @@ function ceilingPlaster(event) {
     //sets the span to correct amount of bags
     let multiBagTotal = document.getElementById("c-total-multi-bags");
     multiBagTotal.innerHTML = totalMultiFinish;
+    //Returns the value of the ceiling's m2
+    let metreSqAreaOfCeilingSpan = document.getElementById("metre-sq-area-of-ceiling");
+    metreSqAreaOfCeilingSpan.innerHTML = metreSqAreaOfCeiling;
 }
 let plasteringCeilingForm = document.getElementById('plastering-ceiling');
 

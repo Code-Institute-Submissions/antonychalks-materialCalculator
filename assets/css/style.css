@@ -105,6 +105,11 @@ h2 {
     border: #425962 3px solid;
 }
 
+.footer-item-container a{
+    text-decoration: none;
+    color: #000;;
+}
+
 #contact-support {
     float: left;
     text-align: center;
@@ -165,15 +170,37 @@ p {
     padding: 10px;
 }
 
+.container {
+    width: 100%;
+}
+
 .input-row>* {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     height: 60px;
     margin-top: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    float: left;
 }
 
-.submit-row>*, #submit-row {
+#input-row>* {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 60px;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 20px;
+    display: inline-block;
+    float: left;
+}
+
+.submit-row>*,
+#submit-row {
     border-radius: 10px;
+    margin-top: 5px;
+    width: 25%;
+
 }
 
 .unstyled {
@@ -189,13 +216,17 @@ fieldset {
     margin-bottom: 20px;
 }
 
+.plastering-ceiling {
+    background: url("assets/images/plaster01.jpg");
+}
+
 @media screen and (max-width: 880px) {
     .row-container {
         display: inline-block;
     }
 
     .label-row>* {
-        width: 50%;
+        width: 49%;
         clear: left;
         float: left;
         margin-top: 5px;
@@ -205,31 +236,47 @@ fieldset {
         border-bottom-right-radius: 0;
 
     }
-        #input-row>*, .input-row>* {
-        width: 50%;
-        height: 40px;
+    .container{
+        width: 45%;
+        display: inline;
+    }
+
+   
+
+    #input-row>*, .input-row>* {
+        
+        float: unset;
+    }
+
+
+    #input-row>*,
+    .input-row>* {
+        clear:right;
+        width: 49%;
         border-top-left-radius: 0;
         border-top-right-radius: 15px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 15px;
     }
 
-    #input-row{
-        margin-top: 5px;;
+    #input-row>*,
+    .label-row>*,
+    .input-row>*,
+    #submit-row>* {
+        height: 50px; 
     }
 
-        
-        #input-row>*,
-        .label-row>*,
-    .input-row>*, #submit-row>* {
-        height: 50px;
-    }
+        .submit-row,
+        #submit-row{
+            clear:both;
+        }
 
-    .submit-row #submit, 
-    .submit-row p, #submit-row p
-     {
+    .submit-row #submit,
+    .submit-row p,
+    #submit-row p {
         width: 40%;
         margin: 5px 4.5%;
+
     }
 
 
@@ -254,11 +301,16 @@ fieldset {
         text-align: center;
     }
 
-    #plastering-ceiling{
-        padding-bottom:10px;
+    #plastering-ceiling {
+        padding-bottom: 10px;
     }
 
-    .not-visible-on-mobile{
+    .width80{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .not-visible-on-mobile {
         visibility: hidden;
     }
 }
