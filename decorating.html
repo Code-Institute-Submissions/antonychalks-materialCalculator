@@ -50,48 +50,49 @@
         <legend>
           <h1>Paint</h1>
         </legend>
-        <div class="label-row">
+        <div class="width-3-L">
           <label for="PL">Area Length (mm)</label>
           <label for="PW">Area Width (mm)</label>
           <label for="PC">Paint Color</label>
         </div>
-        <div class="input-row">
+        <div class="width-3-R">
           <input type="number" id="PL" name="PL" required />
           <input type="number" id="PW" name="PW" required />
           <input type="text" id="PC" name="PC" required />
         </div>
-        <div class="submit-row">
+        <div class="width-3-S">
           <input type="submit" id="submit" value="Calculate" />
-          <p>Paint: <span id="total-paint">0</span>L</p>
+          <p>Paint:<br><span id="total-paint">0</span>L</p>
         </div>
-        <p class="width80">
-          Paint Color: <span id="PC-span">N/A</span>
+        <div class="width-3-S">
+        <p> Paint Color: <span id="PC-span">N/A</span>
         </p>
+        </div>
       </form>
 
       <form id="wallpaper">
         <legend>
           <h1>Wallpaper</h1>
         </legend>
-        <div class="label-row">
+        <div class="width-4-L">
           <label for="WpL">Length of wall(mm)</label>
           <label for="WpW">Height of wall (mm)</label>
           <p>Length Of Roll</p>
           <p>Width Of Roll</p>
         </div>
-        <div class="input-row">
+        <div class="width-4-R">
           <input type="number" id="WpL" name="WpL" required />
           <input type="number" id="WpW" name="WpW" required />
           <p>10m</p>
           <p>530mm</p>
         </div>
-        <div class="submit-row">
+        <div class="width-3-S">
           <input type="submit" id="submit" value="Calculate" />
-          <p>Wallpaper rolls: <span id="total-wallpaper">0</span></p>
+          <p>Wallpaper rolls:<br><span id="total-wallpaper">0</span></p>
         </div>
-        <p class="width80">
-          Paste: <span id="wallpaper-paste">0</span>KG
-        </p>
+        <div class="width-3-S">
+          <p>Paste: <span id="wallpaper-paste">0</span>KG</p>
+        </div>
       </form>
     </div>
     <script src="assets/js/script.js"></script>

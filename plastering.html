@@ -52,7 +52,7 @@
             <h1>Wall</h1>
           </legend> 
           <div class="container">
-            <div class="label-row">
+            <div class="width-4-L" class="label-row">
                 <label for="PWH">Height (mm)</label>
                 <label for="PWW">Width (mm)</label>
                 <label for="PBL">Board Length (mm)</label>
@@ -60,23 +60,25 @@
             </div>
         </div>
 
-            <div class="container">
-                <div class="input-row">
-                    <input type="number" id="PWH" name="PWH" required />
-                    <input type="number" id="PWW" name="PWW" required />
-                    <input type="number" id="PBL" name="PBL" required />
-                    <input type="number" id="PBW" name="PBW" required />
-                </div>
+        <div class="container">
+            <div class="width-4-R" class="input-row">
+                <input type="number" id="PWH" name="PWH" required />
+                <input type="number" id="PWW" name="PWW" required />
+                <input type="number" id="PBL" name="PBL" value="2400" required />
+                <input type="number" id="PBW" name="PBW" value="1200" required />
             </div>
-
-            <div class="submit-row">
-                <input type="submit" id="submit" value="Calculate" />
-              <p>Plasterboards: <span id="w-total-plasterboards">0</span></p>
-            </div>
-            <div class="submit-row">
-              <p >Bags of Multi-finish (25kg): <span id="w-total-multi-bags">0</span></p>
-                <p>Square metreage: <br><span id="metre-sq-area-of-wall">0</span><sup>2</sup></p>
-            </div>
+        </div>
+        <div class="width-4-S" class="submit-row">
+            <input type="submit" id="submit" value="Calculate" />
+            <p>Plasterboards:<br><span id="w-total-plasterboards">0</span></p>
+        </div>
+        <div class="width-4-S" class="submit-row">
+            <p >Bags of Multi-finish (25kg):<br><span id="w-total-multi-bags">0</span></p>
+            <p>Square metreage:<br><span id="metre-sq-area-of-wall">0</span></p>
+        </div>
+        <div>
+            <input type="reset" id="reset">
+        </div>
         </form>
 
         <form id="plastering-ceiling">
@@ -84,7 +86,7 @@
             <legend>
               <h1>Ceiling</h1>
             </legend>
-                <div class="label-row"> 
+                <div class="width-5-L"> 
                     <label for="PCL">Length (mm)</label>
                     <label for="PCW">Width (mm)</label>
                     <label for="CPBL">Board Length (mm)</label>
@@ -93,33 +95,36 @@
                 </div>
 
 
-                <div class="input-row">
+                <div class="width-5-R">
                     <input type="number" id="PCL" name="PCL" required />
                     <input type="number" id="PCW" name="PCW" required />
                     <input type="number" id="CPBL" name="CBPL" value="2400" required />
                     <input type="number" id="CPBW" name="CPBW" value="1200" required />
                 </div>
-                <div id="input-row">
+                <div class="width-5-R">
                     <p><input type="checkbox" id="coving" name="coving" /></p>
                 </div>
 
 
 
-            <div class="submit-row">
+            <div class="width-5-S">
                 <input type="submit" id="submit" value="Calculate" />
-                <p>Plasterboards: <span id="c-total-plasterboards">0</span></p>
+                <p>Plasterboards:<br><span id="c-total-plasterboards">0</span></p>
             </div>
             </div>
-            <div class="submit-row">
-                <p>Bags of Multi-finish: <br> <span id="c-total-multi-bags">0</span></p>
-                <p>Square metreage: <br><span id="metre-sq-area-of-wall"></span><sup>2</sup></p>
+            <div class="width-5-S">
+                <p>Bags of Multi-finish:<br><span id="c-total-multi-bags">0</span></p>
+                <p>Square metreage:<br><span id="metre-sq-area-of-wall"></span><sup>2</sup></p>
             </div>
-            <div class="submit-row">
+            <div class="width-5-S">
                 <p>Bags of Multi-finish (25kg): <span id="w-total-multi-bags">0</span></p>
                 <p id="coving-box" class="unstyled">
                     <!--Remove class with javacript if coving is ticked-->
                     <span id="coving-span"></span>
                 </p>
+            </div>
+            <div>
+                <input type="reset" id="reset">
             </div>
             
           </fieldset>

@@ -175,7 +175,7 @@ function wallPlaster(event) {
     let metreSqAreaOfWall = (height/1000)*(width/1000);
     let multiFinishQty = metreSqAreaOfWall/10;
     let = metreSqAreaOfWallSpan = document.getElementById("metre-sq-area-of-wall")
-    metreSqAreaOfWallSpan.innerHTML = metreSqAreaOfWall;
+    metreSqAreaOfWallSpan.innerHTML = metreSqAreaOfWall +"<sup>2</sup>";
     //rounds up as you can only buy whole products.
     let totalBoard = Math.ceil(boardQty);
     let totalMultiFinish = Math.ceil(multiFinishQty);

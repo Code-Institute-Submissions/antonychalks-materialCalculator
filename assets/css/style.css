@@ -105,9 +105,10 @@ h2 {
     border: #425962 3px solid;
 }
 
-.footer-item-container a{
+.footer-item-container a {
     text-decoration: none;
-    color: #000;;
+    color: #000;
+    ;
 }
 
 #contact-support {
@@ -159,7 +160,75 @@ p {
     background-color: #7CC7A9;
     border: #425962 3px solid;
     display: inline-block;
-    width: 19%;
+    height: 70px;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+
+#reset {
+    width: 90%;
+    margin: 5px 5%
+}
+
+p input {
+    height: unset;
+    padding: unset;
+    margin: unset;
+    border: red solid 3px;
+
+}
+
+
+.width-2>* {
+    width: 48%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+.width-3>* {
+    width: 31%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+.width-4>* {
+    width: 23%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+.width-5>* {
+    width: 18%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+.width-6 label,
+.width-6 p,
+.width-6 input {
+    width: 16%;
+
+}
+
+.width-7>* {
+    width: 12%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
 }
 
 .label-row>* {
@@ -167,7 +236,6 @@ p {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 40px;
-    padding: 10px;
 }
 
 .container {
@@ -175,33 +243,19 @@ p {
 }
 
 .input-row>* {
+    box-sizing: border-box;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     height: 60px;
-    margin-top: 5px;
-    margin-right: 5px;
     display: inline-block;
-    float: left;
 }
 
-#input-row>* {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 60px;
-    margin-top: 5px;
-    margin-right: 5px;
-    padding: 20px;
-    display: inline-block;
-    float: left;
+
+form {
+    clear: both;
 }
 
-.submit-row>*,
-#submit-row {
-    border-radius: 10px;
-    margin-top: 5px;
-    width: 25%;
 
-}
 
 .unstyled {
     border: unset;
@@ -225,7 +279,12 @@ fieldset {
         display: inline-block;
     }
 
-    .label-row>* {
+    .width-2-L>*,
+    .width-3-L>*,
+    .width-4-L>*,
+    .width-5-L>*,
+    .width-6-L>*,
+    .width-7-L>* {
         width: 49%;
         clear: left;
         float: left;
@@ -234,24 +293,30 @@ fieldset {
         border-top-right-radius: 0;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 0;
-
     }
-    .container{
+
+    .container {
         width: 45%;
         display: inline;
     }
 
-   
-
-    #input-row>*, .input-row>* {
-        
+    .width-2-R>*,
+    .width-3-R>*,
+    .width-4-R>*,
+    .width-5-R>*,
+    .width-6-R>*,
+    .width-7-R>* {
         float: unset;
     }
 
 
-    #input-row>*,
-    .input-row>* {
-        clear:right;
+    .width-2-R>*,
+    .width-3-R>*,
+    .width-4-R>*,
+    .width-5-R>*,
+    .width-6-R>*,
+    .width-7-R>* {
+        clear: right;
         width: 49%;
         border-top-left-radius: 0;
         border-top-right-radius: 15px;
@@ -259,26 +324,39 @@ fieldset {
         border-bottom-right-radius: 15px;
     }
 
-    #input-row>*,
-    .label-row>*,
-    .input-row>*,
-    #submit-row>* {
-        height: 50px; 
+    .width-2-R>*,
+    .width-3-R>*,
+    .width-4-R>*,
+    .width-5-R>*,
+    .width-6-R>*,
+    .width-7-R>*,
+    .width-2-L>*,
+    .width-3-L>*,
+    .width-4-L>*,
+    .width-5-L>*,
+    .width-6-L>*,
+    .width-7-L>* {
+        height: 50px;
     }
 
-        .submit-row,
-        #submit-row{
-            clear:both;
-        }
+        .width-2-S,
+        .width-3-S,
+        .width-4-S,
+        .width-5-S,
+        .width-6-S,
+        .width-7-S {
+        clear: both;
+    }
 
-    .submit-row #submit,
-    .submit-row p,
-    #submit-row p {
+        .width-2-S>*,
+        .width-3-S>*,
+        .width-4-S>*,
+        .width-5-S>*,
+        .width-6-S>*,
+        .width-7-S>* {
         width: 40%;
         margin: 5px 4.5%;
-
     }
-
 
     #logo {
         text-align: center;
@@ -303,11 +381,6 @@ fieldset {
 
     #plastering-ceiling {
         padding-bottom: 10px;
-    }
-
-    .width80{
-        width: 80%;
-        margin-left: 10%;
     }
 
     .not-visible-on-mobile {
