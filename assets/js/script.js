@@ -1,10 +1,23 @@
 let title = document.getElementById("title").innerHTML;
-let listItemName = "";
-let listItem1 = "";
-let listItem2 = "";
-let listItemType = "";
+
+
 
 //Carpentry
+function lengthCal(num){
+    let timberLength = "";
+    let maxTimberLength = document.getElementById("MTL").value-300;
+    let totalLength = num;
+    let numOfLengths = Math.ceil(totalLength / maxTimberLength);
+    let i = 1200;
+    for (i = 1200; i < totalLength; i += 300) {
+        if (i > maxTimberLength) {
+            break;
+        }
+    }
+    timberLength = [i, numOfLengths];
+    return timberLength;
+}
+
 function studWall(event){
     event.preventDefault();
     //Imports the elements from the DOM
@@ -13,26 +26,67 @@ function studWall(event){
     let studCenters = document.getElementById("SC").value;
     let studThickness = document.getElementById("ST").value;
     let nogginRows = document.getElementById("NR").value;
+    let loadBearing = document.getElementById("LB");
+
+
     //Works out how high the studs are and how many studs are needed by dividing the rooms width by the stud centers then adding one at the end.
     let studHeight = height-studThickness*2;
     let numOfStuds = Math.floor(width/studCenters)+1;
+
+    //If the wall is loadbearing it needs an extra header and sole plate + 2 extra studs.
+    let numOfHeaderSole = 2;
+    if (loadBearing.checked == true) {
+        numOfHeaderSole = numOfHeaderSole*2;
+        numOfStuds = numOfStuds+2;
+    }
+
     //Works out the length of each noggin
-    let nogginLength = studCenters-studThickness;
-    //Works out the total length of all the studs.
-    let mmStudTotal = studHeight*numOfStuds;
-    //Works out the total length of all the noggins.
-    let mmNogginTotal = (nogginLength*numOfStuds)*nogginRows;
+    let nogginLength = (studCenters-studThickness)*nogginRows;
+
+    //Works out what lengths of timber cover the studs+noggins
+    let studNogginLength = studHeight + nogginLength;
+    let studNogginTimberLength = lengthCal(studNogginLength)[0];
+    numOfStuds = numOfStuds * lengthCal(studNogginLength)[1];
+    console.log(studNogginTimberLength)
+    
+    //Works out what length of timber is needed for header and sole plate.
+    let headerSoleTimberLength = lengthCal(width)[0];
+    numOfHeaderSole = numOfHeaderSole * lengthCal(width)[1];
+    
+
+    
+    //Works out the total of all lengths needed for studs and noggins.
+    let mmStudNogginTotal = studNogginTimberLength*numOfStuds;
+
     //Works out the total length of the header and sole plate.
-    let mmHeadSoleTotal = width*2;
+    let mmHeadSoleTotal = headerSoleTimberLength*numOfHeaderSole;
+
     //Works out the total length of timber in mm.
-    let mmTotal = mmStudTotal+mmNogginTotal+mmHeadSoleTotal;
+    let mmTotal = mmStudNogginTotal+mmHeadSoleTotal;
+
     //Works out the total length of timber in meters.
     let total = mmTotal/1000;
+
     //Sets the inner html of SW-total-length to the amount of timber needed in meters so it is displayed to the user.
     let studWallTimberLength = document.getElementById("SW-total-length");
     studWallTimberLength.innerHTML = total;
 
-    listItem1 = total+"m timber";
+    //Sets the inner HTML of number the number-of-studs Span to show how many studs are needed.
+    let numOfStudsSpan = document.getElementById("num-of-studs");
+    numOfStudsSpan.innerHTML = numOfStuds;
+
+    //Sets the inner HTML of number the header-sole-timber-length Span to show what length timber is needed for the studs and noggins.
+    let studNogginTimberLengthSpan = document.getElementById("stud-noggin-timber-length");
+    studNogginTimberLengthSpan.innerHTML = studNogginTimberLength;
+
+    //Sets the inner HTML of number the number-of-head-sole Span to show how many headers and sole plates are needed.
+    let numOfHeaderSoleSpan = document.getElementById("num-of-header-sole");
+    numOfHeaderSoleSpan.innerHTML = numOfHeaderSole;
+
+    //Sets the inner HTML of number the header-sole-timber-length Span to show what length timber is needed for the header and sole plates.
+    let headerSoleTimberLengthSpan = document.getElementById("header-sole-timber-length");
+    headerSoleTimberLengthSpan.innerHTML = headerSoleTimberLength;
+
 
 }
 let studWallForm = document.getElementById('stud-wall');
@@ -49,16 +103,31 @@ function floor(event) {
     //Works out how many joists are needed by dividing the rooms width by the joist centers then adding one at the end.
     let numOfJoists = Math.floor(width /joistCenters) + 1;
     let blockLength = joistCenters-joistThickness;
+
+
+
+    //Works out what lengths of timber cover the studs+noggins
+    let joistBlockLength = (length + blockLength)*blockRows;
+    let joistBlockTimberLength = lengthCal(joistBlockLength)[0];
+    numOfJoists = numOfJoists * lengthCal(joistBlockLength)[1];
+
+
+
     //Adds all the lengths of timber together.
-    let mmTotal = (length * numOfJoists) + (blockLength * numOfJoists * blockRows) + (width * 2);
+    let mmTotal = joistBlockTimberLength;
     //Times by 1000 to convert from millimeters to meters
     let total = mmTotal / 1000;
     //Sets the inner html of f-total-length to the amount of timber needed in meters so it is displayed to the user.
     let joistTimberLength = document.getElementById("f-total-length");
     joistTimberLength.innerHTML = total;
 
-    listItem1 = total + "m timber";
-    listItemType = "Floor Joists";
+    //Sets the inner HTML of number the number-of-studs Span to show how many studs are needed.
+    let numOfJoistsSpan = document.getElementById("num-of-joists");
+    numOfJoistsSpan.innerHTML = numOfStuds;
+
+    //Sets the inner HTML of number the header-sole-timber-length Span to show what length timber is needed for the studs and noggins.
+    let joistBlockTimberLengthSpan = document.getElementById("joist-block-timber-length");
+    joistBlockTimberLengthSpan.innerHTML = joistBlockTimberLength;
 }
 let floorForm = document.getElementById('floor');
 
@@ -237,6 +306,10 @@ if (title === "Carpentry"){
     paintForm.addEventListener('submit', paint)
     wallpaperForm.addEventListener('submit', wallpaper);
 }
+
+
+
+
 
 
 
