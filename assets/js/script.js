@@ -8,6 +8,7 @@ function lengthCal(num){
     let maxTimberLength = document.getElementById("MTL").value-300;
     let totalLength = num;
     let numOfLengths = Math.ceil(totalLength / maxTimberLength);
+    console.log("numOfLengths", numOfLengths)
     let i = 1200;
     for (i = 1200; i < totalLength; i += 300) {
         if (i > maxTimberLength) {
@@ -42,6 +43,11 @@ function studWall(event){
 
     //Works out the length of each noggin
     let nogginLength = (studCenters-studThickness)*nogginRows;
+    console.log("studCenters", studCenters);
+    console.log("studThickness", studThickness);
+    console.log("nogginRows", nogginRows);
+
+    console.log("nogginLength", nogginLength);
 
     //Works out what lengths of timber cover the studs+noggins
     let studNogginLength = studHeight + nogginLength;
@@ -289,9 +295,9 @@ function wallpaper(event) {
 }
 let wallpaperForm = document.getElementById('wallpaper');
 
-function addToList(event){
-    let listItemName = prompt("Please enter item name:", "")
-    
+function checkBox(event){
+    let checkBoxBox = document.getElementsByName("checkbox")
+    checkBoxBox.checked.apply == true;
 }
 
 
@@ -307,6 +313,8 @@ if (title === "Carpentry"){
     wallpaperForm.addEventListener('submit', wallpaper);
 }
 
+let checkBoxClass = document.getElementsByClassName("checkbox")[0];
+checkBoxClass.addEventListener('click', checkBox);
 
 
 
