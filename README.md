@@ -127,7 +127,6 @@ Other sources used
 
 - [w3schools HTML](https://www.w3schools.com/html/) for quick searching specific HTML elements, their attributes and how to use them.
 - [w3schools CSS](https://www.w3schools.com/CSS/) for quick searching different styling rules and how to apply them with the correct values.
-- [Font Awesome](https://fontawesome.com/) for the icons used in the navigation and the footer.
 
 **Media**
 
