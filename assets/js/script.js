@@ -8,7 +8,6 @@ function lengthCal(num){
     let maxTimberLength = document.getElementById("MTL").value-300;
     let totalLength = num;
     let numOfLengths = Math.ceil(totalLength / maxTimberLength);
-    console.log("numOfLengths", numOfLengths)
     let i = 1200;
     for (i = 1200; i < totalLength; i += 300) {
         if (i > maxTimberLength) {
@@ -29,7 +28,6 @@ function studWall(event){
     let nogginRows = document.getElementById("NR").value;
     let loadBearing = document.getElementById("LB");
 
-
     //Works out how high the studs are and how many studs are needed by dividing the rooms width by the stud centers then adding one at the end.
     let studHeight = height-studThickness*2;
     let numOfStuds = Math.floor(width/studCenters)+1;
@@ -43,17 +41,11 @@ function studWall(event){
 
     //Works out the length of each noggin
     let nogginLength = (studCenters-studThickness)*nogginRows;
-    console.log("studCenters", studCenters);
-    console.log("studThickness", studThickness);
-    console.log("nogginRows", nogginRows);
-
-    console.log("nogginLength", nogginLength);
 
     //Works out what lengths of timber cover the studs+noggins
     let studNogginLength = studHeight + nogginLength;
     let studNogginTimberLength = lengthCal(studNogginLength)[0];
     numOfStuds = numOfStuds * lengthCal(studNogginLength)[1];
-    console.log(studNogginTimberLength)
     
     //Works out what length of timber is needed for header and sole plate.
     let headerSoleTimberLength = lengthCal(width)[0];
@@ -129,7 +121,7 @@ function floor(event) {
 
     //Sets the inner HTML of number the number-of-studs Span to show how many studs are needed.
     let numOfJoistsSpan = document.getElementById("num-of-joists");
-    numOfJoistsSpan.innerHTML = numOfStuds;
+    numOfJoistsSpan.innerHTML = numOfJoists;
 
     //Sets the inner HTML of number the header-sole-timber-length Span to show what length timber is needed for the studs and noggins.
     let joistBlockTimberLengthSpan = document.getElementById("joist-block-timber-length");
@@ -152,17 +144,18 @@ function floorBoard(event) {
     //works out the area of the room and board
     let areaOfRoom = length*width;
     let areaOfBoard = boardLength*boardwidth;
+
     //Works out how many boards are needed
     let boardQty = areaOfRoom/areaOfBoard;
+
     //Rounds it up as you can't purchase half of a board.
-    let total = Math.ceil(boardQty)
+    let total = Math.ceil(boardQty);
+
     //Sets the inner html of FB-total to the number of boards so it is displayed to the user.
     let fbTotal = document.getElementById("FB-total");
     fbTotal.innerHTML = total;
-
 }
 let floorBoardForm = document.getElementById('floor-board');
-
 
 //Plastering
 function wallPlaster(event) {
@@ -180,7 +173,7 @@ function wallPlaster(event) {
     //works out bags of plaster
     let metreSqAreaOfWall = (height/1000)*(width/1000);
     let multiFinishQty = metreSqAreaOfWall/10;
-    let = metreSqAreaOfWallSpan = document.getElementById("metre-sq-area-of-wall")
+    let metreSqAreaOfWallSpan = document.getElementById("metre-sq-area-of-wall");
     metreSqAreaOfWallSpan.innerHTML = metreSqAreaOfWall +"<sup>2</sup>";
     //rounds up as you can only buy whole products.
     let totalBoard = Math.ceil(boardQty);
@@ -295,12 +288,6 @@ function wallpaper(event) {
 }
 let wallpaperForm = document.getElementById('wallpaper');
 
-function checkBox(event){
-    let checkBoxBox = document.getElementsByName("checkbox")
-    checkBoxBox.checked.apply == true;
-}
-
-
 if (title === "Carpentry"){
     floorBoardForm.addEventListener('submit', floorBoard);
     floorForm.addEventListener('submit', floor);
@@ -309,12 +296,9 @@ if (title === "Carpentry"){
     plasteringWallForm.addEventListener('submit', wallPlaster);
     plasteringCeilingForm.addEventListener('submit', ceilingPlaster);
 } else if (title === "Decorating"){
-    paintForm.addEventListener('submit', paint)
+    paintForm.addEventListener('submit', paint);
     wallpaperForm.addEventListener('submit', wallpaper);
 }
-
-let checkBoxClass = document.getElementsByClassName("checkbox")[0];
-checkBoxClass.addEventListener('click', checkBox);
 
 
 
