@@ -3,9 +3,9 @@ let title = document.getElementById("title").innerHTML;
 
 
 //Carpentry
-function lengthCal(num){
+function lengthCal(num) {
     let timberLength = "";
-    let maxTimberLength = document.getElementById("MTL").value-300;
+    let maxTimberLength = document.getElementById("MTL").value - 300;
     let totalLength = num;
     let numOfLengths = Math.ceil(totalLength / maxTimberLength);
     let i = 1200;
@@ -18,7 +18,7 @@ function lengthCal(num){
     return timberLength;
 }
 
-function studWall(event){
+function studWall(event) {
     event.preventDefault();
     //Imports the elements from the DOM
     let height = document.getElementById("SW-Height").value;
@@ -29,41 +29,41 @@ function studWall(event){
     let loadBearing = document.getElementById("LB");
 
     //Works out how high the studs are and how many studs are needed by dividing the rooms width by the stud centers then adding one at the end.
-    let studHeight = height-studThickness*2;
-    let numOfStuds = Math.floor(width/studCenters)+1;
+    let studHeight = height - studThickness * 2;
+    let numOfStuds = Math.floor(width / studCenters) + 1;
 
     //If the wall is loadbearing it needs an extra header and sole plate + 2 extra studs.
     let numOfHeaderSole = 2;
     if (loadBearing.checked == true) {
-        numOfHeaderSole = numOfHeaderSole*2;
-        numOfStuds = numOfStuds+2;
+        numOfHeaderSole = numOfHeaderSole * 2;
+        numOfStuds = numOfStuds + 2;
     }
 
     //Works out the length of each noggin
-    let nogginLength = (studCenters-studThickness)*nogginRows;
+    let nogginLength = (studCenters - studThickness) * nogginRows;
 
     //Works out what lengths of timber cover the studs+noggins
     let studNogginLength = studHeight + nogginLength;
     let studNogginTimberLength = lengthCal(studNogginLength)[0];
     numOfStuds = numOfStuds * lengthCal(studNogginLength)[1];
-    
+
     //Works out what length of timber is needed for header and sole plate.
     let headerSoleTimberLength = lengthCal(width)[0];
     numOfHeaderSole = numOfHeaderSole * lengthCal(width)[1];
-    
 
-    
+
+
     //Works out the total of all lengths needed for studs and noggins.
-    let mmStudNogginTotal = studNogginTimberLength*numOfStuds;
+    let mmStudNogginTotal = studNogginTimberLength * numOfStuds;
 
     //Works out the total length of the header and sole plate.
-    let mmHeadSoleTotal = headerSoleTimberLength*numOfHeaderSole;
+    let mmHeadSoleTotal = headerSoleTimberLength * numOfHeaderSole;
 
     //Works out the total length of timber in mm.
-    let mmTotal = mmStudNogginTotal+mmHeadSoleTotal;
+    let mmTotal = mmStudNogginTotal + mmHeadSoleTotal;
 
     //Works out the total length of timber in meters.
-    let total = mmTotal/1000;
+    let total = mmTotal / 1000;
 
     //Sets the inner html of SW-total-length to the amount of timber needed in meters so it is displayed to the user.
     let studWallTimberLength = document.getElementById("SW-total-length");
@@ -99,13 +99,13 @@ function floor(event) {
     let joistThickness = document.getElementById("JT").value;
     let blockRows = document.getElementById("BR").value;
     //Works out how many joists are needed by dividing the rooms width by the joist centers then adding one at the end.
-    let numOfJoists = Math.floor(width /joistCenters) + 1;
-    let blockLength = joistCenters-joistThickness;
+    let numOfJoists = Math.floor(width / joistCenters) + 1;
+    let blockLength = joistCenters - joistThickness;
 
 
 
     //Works out what lengths of timber cover the studs+noggins
-    let joistBlockLength = (length + blockLength)*blockRows;
+    let joistBlockLength = (length + blockLength) * blockRows;
     let joistBlockTimberLength = lengthCal(joistBlockLength)[0];
     numOfJoists = numOfJoists * lengthCal(joistBlockLength)[1];
 
@@ -142,11 +142,11 @@ function floorBoard(event) {
     let boardwidth = document.getElementById("Board-Width").value;
 
     //works out the area of the room and board
-    let areaOfRoom = length*width;
-    let areaOfBoard = boardLength*boardwidth;
+    let areaOfRoom = length * width;
+    let areaOfBoard = boardLength * boardwidth;
 
     //Works out how many boards are needed
-    let boardQty = areaOfRoom/areaOfBoard;
+    let boardQty = areaOfRoom / areaOfBoard;
 
     //Rounds it up as you can't purchase half of a board.
     let total = Math.ceil(boardQty);
@@ -171,10 +171,10 @@ function wallPlaster(event) {
     //works out plasterboard amount
     let boardQty = areaOfWall / areaOfBoard;
     //works out bags of plaster
-    let metreSqAreaOfWall = (height/1000)*(width/1000);
-    let multiFinishQty = metreSqAreaOfWall/10;
+    let metreSqAreaOfWall = (height / 1000) * (width / 1000);
+    let multiFinishQty = metreSqAreaOfWall / 10;
     let metreSqAreaOfWallSpan = document.getElementById("metre-sq-area-of-wall");
-    metreSqAreaOfWallSpan.innerHTML = metreSqAreaOfWall +"<sup>2</sup>";
+    metreSqAreaOfWallSpan.innerHTML = metreSqAreaOfWall + "<sup>2</sup>";
     //rounds up as you can only buy whole products.
     let totalBoard = Math.ceil(boardQty);
     let totalMultiFinish = Math.ceil(multiFinishQty);
@@ -204,7 +204,7 @@ function ceilingPlaster(event) {
     //works out bags of plaster
     let metreSqAreaOfCeiling = (length / 1000) * (width / 1000);
     let multiFinishQty = metreSqAreaOfCeiling / 10;
-    
+
 
     //coving if statement
     if (coving.checked == true) {
@@ -245,10 +245,10 @@ function paint(event) {
 
     //works out the area of the space that needs painting.
     let mmArea = length * width;
-    let area = mmArea/1000;
+    let area = mmArea / 1000;
 
-    let mlPaintAmount = area*100;
-    let paintAmount = mlPaintAmount/1000;
+    let mlPaintAmount = area * 100;
+    let paintAmount = mlPaintAmount / 1000;
 
     //rounds up as you can only buy whole products.
     let totalPaint = Math.ceil(paintAmount);
@@ -272,13 +272,13 @@ function wallpaper(event) {
     let area = mmArea / 1000;
 
     let mmRollArea = 10000 * 530;
-    let rollArea = mmRollArea/1000;
+    let rollArea = mmRollArea / 1000;
 
     //rounds up as you can only buy whole products.
-    let totalRolls = Math.ceil(area/rollArea);
+    let totalRolls = Math.ceil(area / rollArea);
 
     //Working out how much paste is needed
-    let paste = Math.ceil(totalRolls/3)*2.5;
+    let paste = Math.ceil(totalRolls / 3) * 2.5;
     //sets the span to correct amount of boards
     let wallpaperTotal = document.getElementById("total-wallpaper");
     wallpaperTotal.innerHTML = totalRolls;
@@ -288,14 +288,14 @@ function wallpaper(event) {
 }
 let wallpaperForm = document.getElementById('wallpaper');
 
-if (title === "Carpentry"){
+if (title === "Carpentry") {
     floorBoardForm.addEventListener('submit', floorBoard);
     floorForm.addEventListener('submit', floor);
     studWallForm.addEventListener('submit', studWall);
-} else if (title === "Plastering"){
+} else if (title === "Plastering") {
     plasteringWallForm.addEventListener('submit', wallPlaster);
     plasteringCeilingForm.addEventListener('submit', ceilingPlaster);
-} else if (title === "Decorating"){
+} else if (title === "Decorating") {
     paintForm.addEventListener('submit', paint);
     wallpaperForm.addEventListener('submit', wallpaper);
 }
