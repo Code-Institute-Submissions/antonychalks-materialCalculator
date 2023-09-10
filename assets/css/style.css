@@ -152,9 +152,7 @@ h2 {
 }
 
 
-input,
-label,
-p {
+.box>* {
     box-sizing: border-box;
     text-align: center;
     color: #2C4B56;
@@ -164,9 +162,13 @@ p {
     height: 70px;
     margin-top: 5px;
     margin-left: 1px;
+    box-sizing: border-box;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    float: left;
 }
 
-#reset {
+.reset {
     width: 90%;
     margin: 5px 5%;
     background-color: #8bc2d8;
@@ -179,95 +181,36 @@ p input {
     margin: unset;
 }
 
-
-.width-2-L>*, .width-2-R>*, .width-2-S>* {
-    width: 49%;
-    box-sizing: border-box;
-    border-radius: 10px;
-    margin-left: 0.5%;
-        margin-right: 0.5%;
-    float: left;
-}
-
-.width-3-L>*,
-.width-3-R>*,
-.width-3-S>* {
-    width: 32%;
-    box-sizing: border-box;
-    margin-left: 0.5%;
-        margin-right: 0.5%;
-    float: left;
-}
-
-.width-4-L>*,
-.width-4-R>*,
-.width-4-S>* {
-    width: 24%;
-    box-sizing: border-box;
-    margin-left: 0.5%;
-        margin-right: 0.5%;
-    float: left;
-}
-
-.width-5-L>*,
-.width-5-R>*,
-.width-5-S>* {
-    width: 19%;
-    box-sizing: border-box;
-    margin-left: 0.5%;
-        margin-right: 0.5%;
-    float: left;
-}
-
-.width-6-L>*,
-.width-6-R>*,
-.width-6-S>* {
-    width: 17%;
-    box-sizing: border-box;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    float: left;
-}
-
-.width-7-L>*,
-.width-7-R>*,
-.width-7-S>* {
-    width: 13%;
-    box-sizing: border-box;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    float: left;
-}
-
-.width-2-R>*,
-.width-3-R>*,
-.width-4-R>*,
-.width-5-R>*,
-.width-6-R>*,
-.width-7-R>* {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.width-2-L>*,
-.width-3-L>*,
-.width-4-L>*,
-.width-5-L>*,
-.width-6-L>*,
-.width-7-L>* {
+.L>*{
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+        border-top-right-radius: 15px;
 }
 
-.width-2-S>*,
-.width-3-S>*,
-.width-4-S>*,
-.width-5-S>*,
-.width-6-S>*,
-.width-7-S>*{
+.R>*{
+    border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+}
+
+.S>*{
     border-radius: 15px;
     margin-top: 30px;
     background-color: #8bc2d8;
+}
+
+.width-3>* {
+    width: 32%;
+}
+
+.width-4>* {
+    width: 24%;
+}
+
+.width-5>*{
+    width: 19%;
+}
+
+.width-7>*{
+    width: 13%;
 }
 
 .container {
@@ -291,7 +234,7 @@ fieldset {
     margin-bottom: 20px;
 }
 
-#submit, .checkbox{
+.submit, .checkbox{
     cursor: pointer;
 }
 

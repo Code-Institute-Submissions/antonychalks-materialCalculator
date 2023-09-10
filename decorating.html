@@ -24,81 +24,84 @@
       <h1 id="list">
         <a href="#">Materials list</a>
       </h1>
-    <nav id="nav">
+      <nav id="nav">
         <ul>
-            <li>
-                <a href="carpentry.html">
-                    <h2>Carpentry</h2>
-                </a>
-            </li>
-            <li>
-                <a href="plastering.html">
-                    <h2>Plastering</h2>
-                </a>
-            </li>
-            <li class="active">
-                <a href="decorating.html">
-                    <h2>Decorating</h2>
-                </a>
-            </li>
+          <li>
+            <a href="carpentry.html">
+              <h2>Carpentry</h2>
+            </a>
+          </li>
+          <li>
+            <a href="plastering.html">
+              <h2>Plastering</h2>
+            </a>
+          </li>
+          <li class="active">
+            <a href="decorating.html">
+              <h2>Decorating</h2>
+            </a>
+          </li>
         </ul>
-    </nav>
+      </nav>
     </header>
 
     <div id="main-body-container">
       <form id="paint">
-        <legend>
-          <h1>Paint</h1>
-        </legend>
-        <div class="width-3-L">
-          <label for="PL">Area Length (mm)</label>
-          <label for="PW">Area Width (mm)</label>
-          <label for="PC">Paint Color</label>
-        </div>
-        <div class="width-3-R">
-          <input type="number" id="PL" name="PL" required />
-          <input type="number" id="PW" name="PW" required />
-          <input type="text" id="PC" name="PC" required />
-        </div>
-        <div class="width-3-S">
-          <input type="submit" id="submit" value="Calculate" />
-          <p>Paint:<br><span id="total-paint">0</span>L</p>
-        </div>
-        <div class="width-3-S">
-        <p> Paint Color: <span id="PC-span">N/A</span>
-        </p>
-        </div>
-        <div>
-            <input type="reset" id="reset">
-        </div>
+        <fieldset>
+          <legend>
+            <h1>Paint</h1>
+          </legend>
+          <div class="box width-3 L">
+            <label for="PL">Area Length (mm)</label>
+            <label for="PW">Area Width (mm)</label>
+            <label for="PC">Paint Color</label>
+          </div>
+          <div class="box width-3 R">
+            <input type="number" id="PL" name="PL" required />
+            <input type="number" id="PW" name="PW" required />
+            <input type="text" id="PC" name="PC" required />
+          </div>
+          <div class="box width-3 S">
+            <input type="submit" id="submit-Pa" value="Calculate" />
+            <p>Paint:<br /><span id="total-paint">0</span>L</p>
+          </div>
+          <div class="box width-3 S">
+            <p>Paint Color: <span id="PC-span">N/A</span></p>
+          </div>
+          <div class="box">
+            <input type="reset" class="reset" id="resetPa" />
+          </div>
+        </fieldset>
       </form>
 
       <form id="wallpaper">
-        <legend>
-          <h1>Wallpaper</h1>
-        </legend>
-        <div class="width-4-L">
-          <label for="WpL">Length of wall(mm)</label>
-          <label for="WpW">Height of wall (mm)</label>
-          <p>Length Of Roll</p>
-          <p>Width Of Roll</p>
-        </div>
-        <div class="width-4-R">
-          <input type="number" id="WpL" name="WpL" required />
-          <input type="number" id="WpW" name="WpW" required />
-          <p>10m</p>
-          <p>530mm</p>
-        </div>
-        <div class="width-3-S">
-          <input type="submit" id="submit" value="Calculate" />
-          <p>Wallpaper rolls:<br><span id="total-wallpaper">0</span></p>
-        </div>
-        <div class="width-3-S">
-          <p>Paste: <span id="wallpaper-paste">0</span>KG</p>
-        </div>
-        <div>
-            <input type="reset" id="reset">
-        </div>
+        <fieldset>
+          <legend>
+            <h1>Wallpaper</h1>
+          </legend>
+          <div class="box width-4 L">
+            <label for="WpL">Length of wall(mm)</label>
+            <label for="WpW">Height of wall (mm)</label>
+            <p>Length Of Roll</p>
+            <p>Width Of Roll</p>
+          </div>
+          <div class="box width-4 R">
+            <input type="number" id="WpL" name="WpL" required />
+            <input type="number" id="WpW" name="WpW" required />
+            <p>10m</p>
+            <p>530mm</p>
+          </div>
+          <div class="box width-3 S">
+            <input type="submit" id="submit-WP" value="Calculate" />
+            <p>Wallpaper rolls:<br /><span id="total-wallpaper">0</span></p>
+          </div>
+          <div class="box width-3 S">
+            <p>Paste: <span id="wallpaper-paste">0</span>KG</p>
+          </div>
+          <div class="box">
+            <input type="reset" class="reset" id="reset-WP" />
+          </div>
+        </fieldset>
       </form>
     </div>
     <script src="assets/js/script.js"></script>
@@ -113,11 +116,25 @@
       <div class="footer-item-container" id="merchants">
         <h2>Merchant's websites</h2>
         <ul>
-            <li><a target=”_blank” href="https://www.travisperkins.co.uk/">Travis Perkins</a></li>
-            <li><a target=”_blank” href="https://www.championtimber.com//">Champions</a></li>
-            <li><a target=”_blank” href="https://www.lawsons.co.uk/">Lawsons</a></li>
-            <li><a target=”_blank” href="https://www.jewson.co.uk/">Jewsons</a></li>
-            <li><a target=”_blank” href="https://www.brewers.co.uk/">Brewers</a></li>
+          <li>
+            <a target="”_blank”" href="https://www.travisperkins.co.uk/"
+              >Travis Perkins</a
+            >
+          </li>
+          <li>
+            <a target="”_blank”" href="https://www.championtimber.com//"
+              >Champions</a
+            >
+          </li>
+          <li>
+            <a target="”_blank”" href="https://www.lawsons.co.uk/">Lawsons</a>
+          </li>
+          <li>
+            <a target="”_blank”" href="https://www.jewson.co.uk/">Jewsons</a>
+          </li>
+          <li>
+            <a target="”_blank”" href="https://www.brewers.co.uk/">Brewers</a>
+          </li>
         </ul>
       </div>
     </footer>
